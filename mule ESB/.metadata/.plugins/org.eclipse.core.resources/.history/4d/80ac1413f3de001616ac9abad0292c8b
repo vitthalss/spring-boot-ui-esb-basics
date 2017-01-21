@@ -1,0 +1,4 @@
+@Path
+public class HelloService {
+
+}

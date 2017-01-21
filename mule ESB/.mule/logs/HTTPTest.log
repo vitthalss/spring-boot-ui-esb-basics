@@ -1,0 +1,1156 @@
+2017-01-19 18:39:11,676 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:39:11,811 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:39:11,949 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:39:12,103 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:39:12,104 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:39:12,159 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 18:39:12 IST 2017]; root of context hierarchy
+2017-01-19 18:39:13,675 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:39:14,760 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 18:39:15,445 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:39:15,451 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 18:39:15,452 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5d21202d
+2017-01-19 18:39:15,515 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 18:39:15,561 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 18:39:15,574 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 18:39:16,014 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:39:16,015 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:39:16,017 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:39:16,020 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:39:16,020 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:39:16,100 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 18:39:16,109 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:39:16,111 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:39:16,114 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 18:39:16,115 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 18:39:16,168 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:39:16,197 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:40:28,143 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)//services/test
+2017-01-19 18:40:28,143 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/services/test/]
+2017-01-19 18:45:11,356 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:11,359 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 18:45:11,361 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 18:45:11,432 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 18:45:11,441 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 18:45:11,443 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 18:45:11,443 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 18:45:11,449 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:11,450 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 18:45:11,452 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 18:45:11,453 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 18:45:11,455 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 18:45:11,627 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 18:39:12 IST 2017]; root of context hierarchy
+2017-01-19 18:45:11,684 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 6:45 PM      *
+* Up for: 0 days, 0 hours, 5 mins, 55.664 sec                        *
+**********************************************************************
+2017-01-19 18:45:11,798 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:11,805 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:45:11,812 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:45:11,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:45:11,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:45:11,851 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@11844442: startup date [Thu Jan 19 18:45:11 IST 2017]; root of context hierarchy
+2017-01-19 18:45:12,363 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:45:12,555 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:45:12,559 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 18:45:12,560 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1f33e115
+2017-01-19 18:45:12,571 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 18:45:12,575 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 18:45:12,578 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 18:45:12,635 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:45:12,636 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:45:12,636 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:12,639 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:45:12,639 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:45:12,654 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 18:45:12,659 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:12,662 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:45:12,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 18:45:12,665 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 18:45:12,692 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:45:12,699 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:45:17,702 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:17,703 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 18:45:17,703 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 18:45:17,882 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 18:45:17,892 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 18:45:17,894 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 18:45:17,895 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 18:45:17,898 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:17,899 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 18:45:17,899 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 18:45:17,900 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 18:45:17,901 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 18:45:17,939 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@11844442: startup date [Thu Jan 19 18:45:11 IST 2017]; root of context hierarchy
+2017-01-19 18:45:18,033 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 6:45 PM      *
+* Up for: 0 days, 0 hours, 0 mins, 5.396 sec                         *
+**********************************************************************
+2017-01-19 18:45:18,274 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:18,283 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:45:18,288 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:45:18,316 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:45:18,316 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:45:18,320 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@89319b6: startup date [Thu Jan 19 18:45:18 IST 2017]; root of context hierarchy
+2017-01-19 18:45:18,631 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:45:18,793 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:45:18,795 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 18:45:18,796 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@50f7ada8
+2017-01-19 18:45:18,805 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 18:45:18,809 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 18:45:18,810 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 18:45:18,867 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:45:18,867 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:45:18,868 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:18,869 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:45:18,869 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:45:18,879 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 18:45:18,883 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:45:18,884 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:45:18,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 18:45:18,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 18:45:18,914 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:45:18,921 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:45:25,892 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-19 18:45:25,892 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 18:45:37,038 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-19 18:45:37,039 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 18:45:39,950 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (HEAD)/services/test
+2017-01-19 18:45:39,951 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 18:45:48,838 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (COPY)/services/test
+2017-01-19 18:45:48,838 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 18:45:52,638 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (DELETE)/services/test
+2017-01-19 18:45:52,638 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 18:45:58,758 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (LINK)/services/test
+2017-01-19 18:45:58,758 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 18:49:13,957 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:49:13,959 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 18:49:13,960 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 18:49:14,066 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 18:49:14,069 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 18:49:14,071 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 18:49:14,071 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 18:49:14,079 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:49:14,079 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 18:49:14,080 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 18:49:14,080 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 18:49:14,082 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 18:49:14,107 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@89319b6: startup date [Thu Jan 19 18:45:18 IST 2017]; root of context hierarchy
+2017-01-19 18:49:14,266 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 6:49 PM      *
+* Up for: 0 days, 0 hours, 3 mins, 55.397 sec                        *
+**********************************************************************
+2017-01-19 18:49:14,328 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:49:14,337 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:49:14,342 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:49:14,358 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:49:14,360 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:49:14,364 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@17dde28a: startup date [Thu Jan 19 18:49:14 IST 2017]; root of context hierarchy
+2017-01-19 18:49:14,582 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:49:14,616 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:49:14,773 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:49:14,775 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 18:49:14,776 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6e1be5e
+2017-01-19 18:49:14,784 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 18:49:14,790 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 18:49:14,793 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 18:49:14,838 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:49:14,838 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:49:14,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:49:14,846 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:49:14,847 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:49:14,859 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 18:49:14,863 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:49:14,866 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:49:14,867 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 18:49:14,867 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 18:49:14,887 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:49:14,894 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:52:44,923 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:52:44,924 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 18:52:44,924 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 18:52:45,044 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 18:52:45,056 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 18:52:45,059 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 18:52:45,061 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 18:52:45,078 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:52:45,078 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 18:52:45,079 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 18:52:45,084 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 18:52:45,088 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 18:52:45,157 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@17dde28a: startup date [Thu Jan 19 18:49:14 IST 2017]; root of context hierarchy
+2017-01-19 18:52:45,294 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 6:52 PM      *
+* Up for: 0 days, 0 hours, 3 mins, 30.455 sec                        *
+**********************************************************************
+2017-01-19 18:52:45,369 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:52:45,377 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:52:45,382 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:52:45,411 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:52:45,411 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:52:45,415 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@699fe002: startup date [Thu Jan 19 18:52:45 IST 2017]; root of context hierarchy
+2017-01-19 18:52:45,621 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:52:45,622 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:52:45,649 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:52:45,815 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:52:45,818 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 18:52:45,819 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@68f6b6e7
+2017-01-19 18:52:45,832 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 18:52:45,836 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 18:52:45,837 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 18:52:45,897 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:52:45,897 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:52:45,897 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:52:45,900 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:52:45,900 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:52:45,913 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 18:52:45,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:52:45,920 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:52:45,921 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 18:52:45,921 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 18:52:45,937 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:52:45,942 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:53:50,953 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:53:50,954 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 18:53:50,955 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 18:53:50,990 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 18:53:50,993 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 18:53:50,994 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 18:53:50,995 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 18:53:50,997 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:53:50,998 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 18:53:50,998 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 18:53:50,999 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 18:53:51,001 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 18:53:51,026 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@699fe002: startup date [Thu Jan 19 18:52:45 IST 2017]; root of context hierarchy
+2017-01-19 18:53:51,044 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 6:53 PM      *
+* Up for: 0 days, 0 hours, 1 mins, 5.146 sec                         *
+**********************************************************************
+2017-01-19 18:53:51,121 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:53:51,129 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:53:51,134 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:53:51,148 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:53:51,149 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:53:51,153 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@4d07b894: startup date [Thu Jan 19 18:53:51 IST 2017]; root of context hierarchy
+2017-01-19 18:53:51,464 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:53:51,470 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:53:51,475 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:53:51,522 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:53:51,633 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:53:51,635 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 18:53:51,635 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@93dc11f
+2017-01-19 18:53:51,644 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 18:53:51,655 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 18:53:51,657 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 18:53:51,711 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:53:51,711 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:53:51,711 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:53:51,713 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:53:51,713 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:53:51,722 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 18:53:51,726 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:53:51,728 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:53:51,729 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 18:53:51,729 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 18:53:51,750 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:53:51,756 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:53:56,942 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-19 18:53:56,942 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 18:54:41,008 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:54:41,185 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:54:41,351 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:54:41,498 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:54:41,498 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:54:41,554 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 18:54:41 IST 2017]; root of context hierarchy
+2017-01-19 18:54:42,684 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:54:42,690 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:54:42,693 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:54:42,980 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:54:44,037 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 18:54:44,658 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:54:44,664 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 18:54:44,664 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-19 18:54:44,712 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 18:54:44,754 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 18:54:44,771 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 18:54:45,245 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:54:45,246 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:54:45,248 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:54:45,252 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:54:45,253 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:54:45,328 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 18:54:45,340 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:54:45,342 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:54:45,345 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 18:54:45,346 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 18:54:45,418 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:54:45,447 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:55:07,803 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-19 18:55:07,803 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 18:56:47,292 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:56:47,432 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:56:47,572 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:56:47,711 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:56:47,711 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:56:47,768 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 18:56:47 IST 2017]; root of context hierarchy
+2017-01-19 18:56:48,910 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:56:48,916 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:56:48,919 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 18:56:49,204 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:56:50,425 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 18:56:51,155 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:56:51,162 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 18:56:51,163 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-19 18:56:51,215 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 18:56:51,260 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 18:56:51,274 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 18:56:51,689 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:56:51,690 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 18:56:51,691 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:56:51,694 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:56:51,694 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:56:51,767 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 18:56:51,774 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:56:51,776 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:56:51,779 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 18:56:51,780 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 18:56:51,840 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:56:51,869 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:57:00,271 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-19 18:57:00,272 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 19:19:17,081 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:19:17,248 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:19:17,392 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:19:17,549 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:19:17,550 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:19:17,610 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:19:17 IST 2017]; root of context hierarchy
+2017-01-19 19:19:18,845 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:19:18,852 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:19:18,855 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:19:19,254 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:19:20,563 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 19:19:21,280 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:19:21,288 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:19:21,290 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-19 19:19:21,345 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:19:21,381 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:19:21,395 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:19:21,898 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:19:21,900 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:19:21,902 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:19:21,904 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:19:21,905 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:19:21,984 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:19:21,996 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:19:21,998 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:19:22,001 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:19:22,002 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:19:22,053 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:19:22,083 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:21:27,205 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:21:27,208 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 19:21:27,209 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 19:21:27,334 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 19:21:27,346 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 19:21:27,348 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 19:21:27,349 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 19:21:27,356 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:21:27,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 19:21:27,359 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 19:21:27,360 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 19:21:27,362 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 19:21:27,530 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:19:17 IST 2017]; root of context hierarchy
+2017-01-19 19:21:27,564 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 7:21 PM      *
+* Up for: 0 days, 0 hours, 2 mins, 5.658 sec                         *
+**********************************************************************
+2017-01-19 19:21:27,686 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:21:27,697 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:21:27,703 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:21:27,724 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:21:27,724 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:21:27,729 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@65eae57b: startup date [Thu Jan 19 19:21:27 IST 2017]; root of context hierarchy
+2017-01-19 19:21:28,074 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:21:28,077 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:21:28,077 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:21:28,157 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:21:28,362 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:21:28,366 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:21:28,368 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1096cd9b
+2017-01-19 19:21:28,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:21:28,386 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:21:28,388 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:21:28,479 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:21:28,482 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:21:28,483 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:21:28,487 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:21:28,488 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:21:28,507 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:21:28,515 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:21:28,523 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:21:28,529 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:21:28,537 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:21:28,566 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:21:28,578 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:21:46,775 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:21:46,907 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:21:47,036 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:21:47,183 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:21:47,183 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:21:47,242 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:21:47 IST 2017]; root of context hierarchy
+2017-01-19 19:21:48,447 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:21:48,453 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:21:48,456 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:21:48,797 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:21:50,077 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 19:21:50,777 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:21:50,782 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:21:50,782 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-19 19:21:50,820 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:21:50,851 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:21:50,865 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:21:51,308 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:21:51,309 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:21:51,311 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:21:51,314 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:21:51,315 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:21:51,391 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:21:51,401 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:21:51,404 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:21:51,408 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:21:51,411 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:21:51,484 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:21:51,512 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:23:16,655 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:23:16,656 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 19:23:16,657 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 19:23:16,717 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 19:23:16,734 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 19:23:16,736 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 19:23:16,737 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 19:23:16,743 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:23:16,744 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 19:23:16,746 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 19:23:16,747 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 19:23:16,750 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 19:23:16,926 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:21:47 IST 2017]; root of context hierarchy
+2017-01-19 19:23:16,996 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 7:23 PM      *
+* Up for: 0 days, 0 hours, 1 mins, 25.680 sec                        *
+**********************************************************************
+2017-01-19 19:23:17,133 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:23:17,143 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:23:17,157 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:23:17,179 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:23:17,180 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:23:17,185 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@76f93670: startup date [Thu Jan 19 19:23:17 IST 2017]; root of context hierarchy
+2017-01-19 19:23:17,711 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:23:17,712 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:23:17,715 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:23:17,814 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:23:18,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:23:18,063 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:23:18,063 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7eb7dc93
+2017-01-19 19:23:18,074 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:23:18,079 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:23:18,081 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:23:18,144 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:23:18,145 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:23:18,145 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:23:18,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:23:18,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:23:18,161 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:23:18,166 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:23:18,168 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:23:18,172 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:23:18,173 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:23:18,202 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:23:18,216 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:23:26,982 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:23:27,183 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:23:27,391 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:23:27,564 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:23:27,565 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:23:27,645 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:23:27 IST 2017]; root of context hierarchy
+2017-01-19 19:23:28,853 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:23:28,858 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:23:28,861 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:23:29,191 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:23:30,318 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 19:23:31,207 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:23:31,215 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:23:31,217 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-19 19:23:31,292 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:23:31,356 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:23:31,376 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:23:32,093 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:23:32,097 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:23:32,103 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:23:32,110 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:23:32,111 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:23:32,200 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:23:32,214 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:23:32,217 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:23:32,222 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:23:32,224 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:23:32,284 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:23:32,311 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:24:37,438 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:24:37,442 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 19:24:37,443 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 19:24:37,513 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 19:24:37,521 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 19:24:37,523 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 19:24:37,523 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 19:24:37,528 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:24:37,529 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 19:24:37,531 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 19:24:37,531 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 19:24:37,533 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 19:24:37,671 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:23:27 IST 2017]; root of context hierarchy
+2017-01-19 19:24:37,716 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 7:24 PM      *
+* Up for: 0 days, 0 hours, 1 mins, 5.609 sec                         *
+**********************************************************************
+2017-01-19 19:24:37,865 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:24:37,876 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:24:37,881 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:24:37,903 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:24:37,903 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:24:37,907 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1dc8702d: startup date [Thu Jan 19 19:24:37 IST 2017]; root of context hierarchy
+2017-01-19 19:24:38,372 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:24:38,373 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:24:38,374 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:24:38,417 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:24:38,648 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:24:38,650 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:24:38,652 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@36bd350
+2017-01-19 19:24:38,662 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:24:38,665 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:24:38,665 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:24:38,725 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:24:38,725 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:24:38,726 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:24:38,728 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:24:38,728 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:24:38,745 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:24:38,753 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:24:38,755 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:24:38,757 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:24:38,757 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:24:38,777 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:24:38,787 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:24:49,533 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:24:49,672 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:24:49,820 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:24:49,968 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:24:49,969 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:24:50,032 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:24:50 IST 2017]; root of context hierarchy
+2017-01-19 19:24:51,289 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:24:51,297 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:24:51,300 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:24:51,638 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:24:52,889 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 19:24:53,654 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:24:53,663 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:24:53,664 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-19 19:24:53,705 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:24:53,741 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:24:53,751 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:24:54,142 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:24:54,143 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:24:54,144 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:24:54,147 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:24:54,147 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:24:54,214 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:24:54,223 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:24:54,229 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:24:54,233 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:24:54,234 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:24:54,292 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:24:54,327 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:25:49,708 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-19 19:25:49,709 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 19:26:49,468 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:26:49,470 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: HTTPTestFlow
+2017-01-19 19:26:49,472 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: HTTPTestFlow.stage1
+2017-01-19 19:26:49,562 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 19:26:49,575 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8093/services
+2017-01-19 19:26:49,577 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 19:26:49,577 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 19:26:49,583 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'HTTPTest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:26:49,584 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 19:26:49,586 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: HTTPTestFlow
+2017-01-19 19:26:49,587 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: HTTPTestFlow.stage1
+2017-01-19 19:26:49,589 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 19:26:49,755 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:24:50 IST 2017]; root of context hierarchy
+2017-01-19 19:26:49,785 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "HTTPTest" shut down normally on: 19/1/17 7:26 PM      *
+* Up for: 0 days, 0 hours, 1 mins, 55.637 sec                        *
+**********************************************************************
+2017-01-19 19:26:49,933 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:26:49,944 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:26:49,952 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:26:49,978 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:26:49,978 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:26:49,984 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@28bb28b6: startup date [Thu Jan 19 19:26:49 IST 2017]; root of context hierarchy
+2017-01-19 19:26:50,398 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:26:50,400 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:26:50,401 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:26:50,444 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:26:50,640 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:26:50,642 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:26:50,643 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2917f5f3
+2017-01-19 19:26:50,653 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:26:50,657 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:26:50,658 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:26:50,726 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:26:50,726 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:26:50,726 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:26:50,728 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:26:50,729 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:26:50,743 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:26:50,748 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:26:50,749 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:26:50,751 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:26:50,751 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:26:50,774 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:26:50,781 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:27:00,599 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:27:00,741 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 19:27:00,898 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 19:27:01,040 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 19:27:01,040 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 19:27:01,096 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 19:27:01 IST 2017]; root of context hierarchy
+2017-01-19 19:27:02,285 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:27:02,290 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:27:02,293 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-19 19:27:02,632 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 19:27:04,055 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 19:27:04,855 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 19:27:04,862 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-19 19:27:04,862 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-19 19:27:04,905 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-19 19:27:04,939 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-19 19:27:04,952 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-19 19:27:05,379 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:27:05,379 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-19 19:27:05,380 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:27:05,383 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 19:27:05,384 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 19:27:05,464 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-19 19:27:05,471 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 19:27:05,473 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 19:27:05,477 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-19 19:27:05,479 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-19 19:27:05,546 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 19:27:05,575 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 19:27:05,935 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-19 19:27:05,935 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-19 19:27:08,123 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-19 19:27:08,123 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-20 10:56:59,040 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 10:56:59,593 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-20 10:56:59,937 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-20 10:57:00,099 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-20 10:57:00,099 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-20 10:57:00,189 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Fri Jan 20 10:57:00 IST 2017]; root of context hierarchy
+2017-01-20 10:57:01,587 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-20 10:57:01,593 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-20 10:57:01,597 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-20 10:57:02,013 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-20 10:57:03,204 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-20 10:57:04,003 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-20 10:57:04,010 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-20 10:57:04,010 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-20 10:57:04,060 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-20 10:57:04,122 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-20 10:57:04,162 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-20 10:57:04,605 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-20 10:57:04,605 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-20 10:57:04,607 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 10:57:04,609 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-20 10:57:04,610 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-20 10:57:04,697 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-20 10:57:04,709 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 10:57:04,712 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-20 10:57:04,714 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-20 10:57:04,715 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-20 10:57:04,807 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-20 10:57:04,835 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-20 10:57:13,139 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PUT)/services/test
+2017-01-20 10:57:13,140 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-20 10:57:23,640 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (PATCH)/services/test
+2017-01-20 10:57:23,640 [[HTTPTest].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [([get, post])/services/test/]
+2017-01-20 15:47:38,606 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'HTTPTest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 15:47:38,745 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-20 15:47:38,895 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-20 15:47:39,091 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-20 15:47:39,091 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-20 15:47:39,184 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Fri Jan 20 15:47:39 IST 2017]; root of context hierarchy
+2017-01-20 15:47:40,640 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-20 15:47:40,645 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-20 15:47:40,648 [main] WARN  org.mule.transport.http.config.HttpResponseBuilderDefinitionParser - Schema warning: Use of element <error-response-builder> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2017-01-20 15:47:41,027 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-20 15:47:42,273 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-20 15:47:43,112 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-20 15:47:43,120 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: HTTPTestFlow
+2017-01-20 15:47:43,121 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fc3c165
+2017-01-20 15:47:43,176 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: HTTPTestFlow.stage1
+2017-01-20 15:47:43,264 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-tx-log/tx2.log
+2017-01-20 15:47:43,282 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/HTTPTest/queue-xa-tx-log/tx2.log
+2017-01-20 15:47:43,703 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-20 15:47:43,703 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/HTTPTest/HTTPTest.xml'}]"
+2017-01-20 15:47:43,705 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'HTTPTest'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 15:47:43,708 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-20 15:47:43,708 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-20 15:47:43,786 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8093/services
+2017-01-20 15:47:43,793 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 15:47:43,795 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-20 15:47:43,798 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: HTTPTestFlow
+2017-01-20 15:47:43,799 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: HTTPTestFlow.stage1
+2017-01-20 15:47:43,883 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-20 15:47:43,910 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: HTTPTest                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************

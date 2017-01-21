@@ -1,0 +1,8 @@
+package com.xcaliber.soap;
+
+import javax.jws.WebService;
+
+@WebService(name="HelloWorldService")
+public interface HelloWorldService {
+
+}

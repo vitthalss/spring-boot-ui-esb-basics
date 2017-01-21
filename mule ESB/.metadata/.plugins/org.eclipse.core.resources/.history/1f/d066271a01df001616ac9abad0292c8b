@@ -1,0 +1,11 @@
+package com.xcaliber.soap.impl;
+
+
+
+public class HelloWorldServiceImpl {
+	
+	String sayHi(String input){
+		
+	}
+
+}

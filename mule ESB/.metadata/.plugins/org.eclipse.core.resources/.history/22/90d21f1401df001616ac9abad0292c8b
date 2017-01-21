@@ -1,0 +1,13 @@
+package com.xcaliber.soap.impl;
+
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+
+public class HelloWorldServiceImpl {
+	
+	String sayHi(String input){
+		
+	}
+
+}

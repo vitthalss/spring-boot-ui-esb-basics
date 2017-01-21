@@ -1,0 +1,372 @@
+2017-01-19 16:48:30,807 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'muleESB'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 16:48:30,939 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 16:48:31,085 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 16:48:31,227 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 16:48:31,227 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 16:48:31,281 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 16:48:31 IST 2017]; root of context hierarchy
+2017-01-19 16:48:32,789 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 16:48:34,199 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 16:48:34,572 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2017-01-19 16:48:34,769 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 16:48:34,775 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: muleESBFlow
+2017-01-19 16:48:34,776 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@181e72d3
+2017-01-19 16:48:34,806 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: muleESBFlow.stage1
+2017-01-19 16:48:34,850 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-tx-log/tx2.log
+2017-01-19 16:48:34,869 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-xa-tx-log/tx2.log
+2017-01-19 16:48:35,353 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/muleESB/muleESB.xml'}]"
+2017-01-19 16:48:35,353 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/muleESB/muleESB.xml'}]"
+2017-01-19 16:48:35,355 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'muleESB'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 16:48:35,359 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 16:48:35,359 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 16:48:35,384 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=45bf6f39
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 16:48:35,385 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=45bf6f39
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 16:48:35,386 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2017-01-19 16:48:35,394 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 16:48:35,396 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 16:48:35,399 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: muleESBFlow
+2017-01-19 16:48:35,400 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: muleESBFlow.stage1
+2017-01-19 16:48:35,411 [main] INFO  org.mule.transport.file.FileConnector - Registering listener: muleESBFlow on endpointUri: file:///home/xcaliber/Vitthal/MuleESB/Source
+2017-01-19 16:48:35,451 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: FileMessageReceiver
+2017-01-19 16:48:35,459 [main] INFO  org.mule.transport.file.FileMessageReceiver - Connecting clusterizable message receiver
+2017-01-19 16:48:35,460 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: FileMessageReceiver
+2017-01-19 16:48:35,461 [main] INFO  org.mule.transport.file.FileMessageReceiver - Starting clusterizable message receiver
+2017-01-19 16:48:35,523 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 16:48:35,556 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.muleESB:type=Endpoint,service="muleESBFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.MuleESB.Source"
+2017-01-19 16:48:35,558 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.muleESB:type=Endpoint,service="muleESBFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.MuleESB.Source"
+2017-01-19 16:48:35,561 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.muleESB:type=Connector,name="connector.file.mule.default.1"
+2017-01-19 16:48:35,567 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: muleESB                                               *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 16:48:36,473 [[muleESB].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/MuleESB/Source/MY COMMAND DOCUMENT.sql
+2017-01-19 16:48:36,547 [[muleESB].muleESBFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Transfer has started now
+2017-01-19 16:48:36,598 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.22370826'. Object is: FileMessageDispatcher
+2017-01-19 16:48:36,599 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.22370826'. Object is: FileMessageDispatcher
+2017-01-19 16:48:36,604 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: /home/xcaliber/Vitthal/MuleESB/Destination/MY COMMAND DOCUMENT.sql
+2017-01-19 17:04:30,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'muleESB'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 17:04:30,844 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: muleESBFlow
+2017-01-19 17:04:30,844 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Removing listener on endpointUri: file:///home/xcaliber/Vitthal/MuleESB/Source
+2017-01-19 17:04:30,845 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'null'. Object is: FileMessageReceiver
+2017-01-19 17:04:30,847 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'null'. Object is: FileMessageReceiver
+2017-01-19 17:04:30,848 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: muleESBFlow.stage1
+2017-01-19 17:04:30,950 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2017-01-19 17:04:30,961 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2017-01-19 17:04:30,974 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'connector.file.mule.default.dispatcher.22370826'. Object is: FileMessageDispatcher
+2017-01-19 17:04:30,974 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'connector.file.mule.default.dispatcher.22370826'. Object is: FileMessageDispatcher
+2017-01-19 17:04:30,983 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2017-01-19 17:04:30,983 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2017-01-19 17:04:30,991 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'muleESB'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 17:04:30,992 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2017-01-19 17:04:31,003 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: muleESBFlow
+2017-01-19 17:04:31,008 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: muleESBFlow.stage1
+2017-01-19 17:04:31,011 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2017-01-19 17:04:31,019 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=45bf6f39
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 17:04:31,021 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2017-01-19 17:04:31,262 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 16:48:31 IST 2017]; root of context hierarchy
+2017-01-19 17:04:31,324 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "muleESB" shut down normally on: 19/1/17 5:04 PM       *
+* Up for: 0 days, 0 hours, 15 mins, 55.963 sec                       *
+**********************************************************************
+2017-01-19 17:04:31,471 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'muleESB'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 17:04:31,481 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 17:04:31,488 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 17:04:31,511 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 17:04:31,512 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 17:04:31,518 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@541df612: startup date [Thu Jan 19 17:04:31 IST 2017]; root of context hierarchy
+2017-01-19 17:04:31,840 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 17:04:32,024 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2017-01-19 17:04:32,063 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 17:04:32,067 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: muleESBFlow
+2017-01-19 17:04:32,067 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6d3435ad
+2017-01-19 17:04:32,076 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: muleESBFlow.stage1
+2017-01-19 17:04:32,081 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-tx-log/tx2.log
+2017-01-19 17:04:32,084 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-xa-tx-log/tx2.log
+2017-01-19 17:04:32,139 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/muleESB/muleESB.xml'}]"
+2017-01-19 17:04:32,139 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/muleESB/muleESB.xml'}]"
+2017-01-19 17:04:32,139 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'muleESB'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 17:04:32,141 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 17:04:32,142 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 17:04:32,146 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=26c4e8bd
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 17:04:32,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=26c4e8bd
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 17:04:32,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2017-01-19 17:04:32,152 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 17:04:32,154 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 17:04:32,156 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: muleESBFlow
+2017-01-19 17:04:32,157 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: muleESBFlow.stage1
+2017-01-19 17:04:32,161 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Registering listener: muleESBFlow on endpointUri: file:///home/xcaliber/Vitthal/MuleESB/Source
+2017-01-19 17:04:32,167 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: FileMessageReceiver
+2017-01-19 17:04:32,172 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileMessageReceiver - Connecting clusterizable message receiver
+2017-01-19 17:04:32,172 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: FileMessageReceiver
+2017-01-19 17:04:32,173 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileMessageReceiver - Starting clusterizable message receiver
+2017-01-19 17:04:32,193 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 17:04:32,200 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.muleESB:type=Endpoint,service="muleESBFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.MuleESB.Source"
+2017-01-19 17:04:32,200 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.muleESB:type=Endpoint,service="muleESBFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.MuleESB.Source"
+2017-01-19 17:04:32,204 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.muleESB:type=Connector,name="connector.file.mule.default.1"
+2017-01-19 17:04:32,208 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: muleESB                                               *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:23:34,983 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'muleESB'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:23:35,391 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:23:35,595 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:23:35,821 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:23:35,821 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:23:35,935 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 18:23:35 IST 2017]; root of context hierarchy
+2017-01-19 18:23:37,654 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:23:39,356 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 18:23:39,971 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2017-01-19 18:23:40,278 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:23:40,282 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: muleESBFlow
+2017-01-19 18:23:40,282 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@181e72d3
+2017-01-19 18:23:40,311 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: muleESBFlow.stage1
+2017-01-19 18:23:40,398 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-tx-log/tx2.log
+2017-01-19 18:23:40,417 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-xa-tx-log/tx2.log
+2017-01-19 18:23:41,096 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/muleESB/muleESB.xml'}]"
+2017-01-19 18:23:41,097 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/muleESB/muleESB.xml'}]"
+2017-01-19 18:23:41,098 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'muleESB'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:23:41,103 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:23:41,103 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:23:41,155 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=45bf6f39
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 18:23:41,155 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=45bf6f39
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 18:23:41,157 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2017-01-19 18:23:41,166 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:23:41,169 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:23:41,172 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: muleESBFlow
+2017-01-19 18:23:41,173 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: muleESBFlow.stage1
+2017-01-19 18:23:41,184 [main] INFO  org.mule.transport.file.FileConnector - Registering listener: muleESBFlow on endpointUri: file:///home/xcaliber/Vitthal/MuleESB/Source
+2017-01-19 18:23:41,270 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: FileMessageReceiver
+2017-01-19 18:23:41,277 [main] INFO  org.mule.transport.file.FileMessageReceiver - Connecting clusterizable message receiver
+2017-01-19 18:23:41,279 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: FileMessageReceiver
+2017-01-19 18:23:41,279 [main] INFO  org.mule.transport.file.FileMessageReceiver - Starting clusterizable message receiver
+2017-01-19 18:23:41,353 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:23:41,388 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.muleESB:type=Endpoint,service="muleESBFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.MuleESB.Source"
+2017-01-19 18:23:41,389 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.muleESB:type=Endpoint,service="muleESBFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.MuleESB.Source"
+2017-01-19 18:23:41,393 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.muleESB:type=Connector,name="connector.file.mule.default.1"
+2017-01-19 18:23:41,401 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: muleESB                                               *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:23:42,300 [[muleESB].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/MuleESB/Source/MY COMMAND DOCUMENT.sql
+2017-01-19 18:23:42,403 [[muleESB].muleESBFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Transfer has started now
+2017-01-19 18:23:42,449 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1300516924'. Object is: FileMessageDispatcher
+2017-01-19 18:23:42,450 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1300516924'. Object is: FileMessageDispatcher
+2017-01-19 18:23:42,455 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: /home/xcaliber/Vitthal/MuleESB/Destination/MY COMMAND DOCUMENT.sql
+2017-01-19 18:58:52,276 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'muleESB'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:58:52,407 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-19 18:58:52,544 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-19 18:58:52,685 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-19 18:58:52,685 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-19 18:58:52,743 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Thu Jan 19 18:58:52 IST 2017]; root of context hierarchy
+2017-01-19 18:58:54,143 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 18:58:55,540 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-19 18:58:55,921 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2017-01-19 18:58:56,164 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-19 18:58:56,171 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: muleESBFlow
+2017-01-19 18:58:56,174 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@181e72d3
+2017-01-19 18:58:56,206 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: muleESBFlow.stage1
+2017-01-19 18:58:56,250 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-tx-log/tx2.log
+2017-01-19 18:58:56,269 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/muleESB/queue-xa-tx-log/tx2.log
+2017-01-19 18:58:56,895 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/muleESB/muleESB.xml'}]"
+2017-01-19 18:58:56,895 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/muleESB/muleESB.xml'}]"
+2017-01-19 18:58:56,898 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'muleESB'                                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:58:56,902 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-19 18:58:56,902 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-19 18:58:56,927 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=45bf6f39
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 18:58:56,927 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=45bf6f39
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-19 18:58:56,928 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2017-01-19 18:58:56,936 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-19 18:58:56,939 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-19 18:58:56,943 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: muleESBFlow
+2017-01-19 18:58:56,944 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: muleESBFlow.stage1
+2017-01-19 18:58:56,956 [main] INFO  org.mule.transport.file.FileConnector - Registering listener: muleESBFlow on endpointUri: file:///home/xcaliber/Vitthal/MuleESB/Source
+2017-01-19 18:58:56,995 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: FileMessageReceiver
+2017-01-19 18:58:57,002 [main] INFO  org.mule.transport.file.FileMessageReceiver - Connecting clusterizable message receiver
+2017-01-19 18:58:57,003 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: FileMessageReceiver
+2017-01-19 18:58:57,004 [main] INFO  org.mule.transport.file.FileMessageReceiver - Starting clusterizable message receiver
+2017-01-19 18:58:57,066 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-19 18:58:57,094 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.muleESB:type=Endpoint,service="muleESBFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.MuleESB.Source"
+2017-01-19 18:58:57,095 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.muleESB:type=Endpoint,service="muleESBFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.MuleESB.Source"
+2017-01-19 18:58:57,096 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.muleESB:type=Connector,name="connector.file.mule.default.1"
+2017-01-19 18:58:57,102 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: muleESB                                               *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-19 18:58:58,013 [[muleESB].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/MuleESB/Source/MY COMMAND DOCUMENT.sql
+2017-01-19 18:58:58,062 [[muleESB].muleESBFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - Transfer has started now
+2017-01-19 18:58:58,101 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1442369622'. Object is: FileMessageDispatcher
+2017-01-19 18:58:58,102 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1442369622'. Object is: FileMessageDispatcher
+2017-01-19 18:58:58,108 [[muleESB].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: /home/xcaliber/Vitthal/MuleESB/Destination/MY COMMAND DOCUMENT.sql

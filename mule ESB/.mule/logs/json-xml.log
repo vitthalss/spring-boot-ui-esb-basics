@@ -1,0 +1,771 @@
+2017-01-20 14:26:42,077 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'json-xml'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 14:26:42,210 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2017-01-20 14:26:42,354 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2017-01-20 14:26:42,493 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2017-01-20 14:26:42,494 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.7)
+2017-01-20 14:26:42,551 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@51972dc7: startup date [Fri Jan 20 14:26:42 IST 2017]; root of context hierarchy
+2017-01-20 14:26:44,023 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-20 14:26:45,059 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2017-01-20 14:26:45,343 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2017-01-20 14:26:45,551 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2017-01-20 14:26:45,557 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: json-xmlFlow
+2017-01-20 14:26:45,558 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@e042c99
+2017-01-20 14:26:45,590 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: json-xmlFlow.stage1
+2017-01-20 14:26:45,625 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/json-xml/queue-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/json-xml/queue-tx-log/tx2.log
+2017-01-20 14:26:45,642 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/json-xml/queue-xa-tx-log/tx1.log and /home/xcaliber/Documents/AnypointStudio/workspace/.mule/./.mule/json-xml/queue-xa-tx-log/tx2.log
+2017-01-20 14:26:46,152 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/json-xml/json-xml.xml'}]"
+2017-01-20 14:26:46,152 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/home/xcaliber/Documents/AnypointStudio/workspace/.mule/apps/json-xml/json-xml.xml'}]"
+2017-01-20 14:26:46,155 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'json-xml'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 14:26:46,160 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2017-01-20 14:26:46,161 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2017-01-20 14:26:46,186 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=54f4a7f0
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-20 14:26:46,186 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=54f4a7f0
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2017-01-20 14:26:46,189 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2017-01-20 14:26:46,198 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2017-01-20 14:26:46,201 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2017-01-20 14:26:46,206 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: json-xmlFlow
+2017-01-20 14:26:46,207 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: json-xmlFlow.stage1
+2017-01-20 14:26:46,237 [main] INFO  org.mule.transport.file.FileConnector - Registering listener: json-xmlFlow on endpointUri: file:///home/xcaliber/Vitthal/xcaliber%20documents/FTP/Input
+2017-01-20 14:26:46,293 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: FileMessageReceiver
+2017-01-20 14:26:46,312 [main] INFO  org.mule.transport.file.FileMessageReceiver - Connecting clusterizable message receiver
+2017-01-20 14:26:46,313 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: FileMessageReceiver
+2017-01-20 14:26:46,313 [main] INFO  org.mule.transport.file.FileMessageReceiver - Starting clusterizable message receiver
+2017-01-20 14:26:46,371 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2017-01-20 14:26:46,396 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.json-xml:type=Endpoint,service="json-xmlFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input"
+2017-01-20 14:26:46,397 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.json-xml:type=Endpoint,service="json-xmlFlow",connector=connector.file.mule.default,name="endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input"
+2017-01-20 14:26:46,399 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.json-xml:type=Connector,name="connector.file.mule.default.1"
+2017-01-20 14:26:46,403 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: json-xml                                              *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2017-01-20 14:27:17,332 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/.Employee.json.swp
+2017-01-20 14:27:17,378 [[json-xml].json-xmlFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=71c0eaf0-deee-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=.Employee.json.swp
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=4096
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=.Employee.json.swp
+    timestamp=1484902637000
+  OUTBOUND scoped properties:
+    filename=.Employee.json.swp
+  SESSION scoped properties:
+}
+2017-01-20 14:27:17,417 [[json-xml].json-xmlFlow.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : java.io.IOException: Illegal character: <b> (javax.xml.stream.XMLStreamException)
+Type                  : org.mule.api.transformer.TransformerException
+Code                  : MULE_ERROR-64999
+JavaDoc               : http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html
+Transformer           : JsonToXml{this=1abebef3, name='JsonToString', ignoreBadInput=false, returnClass=SimpleDataType{type=java.lang.String, mimeType='text/xml', encoding='null'}, sourceTypes=[SimpleDataType{type=java.lang.String, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.InputStream, mimeType='*/*', encoding='null'}, SimpleDataType{type=[B, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.Reader, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.net.URL, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.File, mimeType='*/*', encoding='null'}]}
+********************************************************************************
+Exception stack is:
+1. Illegal character: <b> (java.io.IOException)
+  de.odysseus.staxon.json.stream.impl.Yylex:641 (null)
+2. java.io.IOException: Illegal character: <b> (javax.xml.stream.XMLStreamException)
+  de.odysseus.staxon.base.AbstractXMLStreamReader:218 (http://java.sun.com/j2ee/sdk_1.3/techdocs/api/javax/xml/stream/XMLStreamException.html)
+3. java.io.IOException: Illegal character: <b> (javax.xml.stream.XMLStreamException) (org.mule.api.transformer.TransformerException)
+  org.mule.module.json.transformers.JsonToXml:67 (http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html)
+********************************************************************************
+Root Exception stack trace:
+java.io.IOException: Illegal character: <b>
+	at de.odysseus.staxon.json.stream.impl.Yylex.yylex(Yylex.java:641)
+	at de.odysseus.staxon.json.stream.impl.Yylex.nextSymbol(Yylex.java:271)
+	at de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl.next(JsonStreamSourceImpl.java:107)
+	at de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl.peek(JsonStreamSourceImpl.java:250)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.consume(JsonXMLStreamReader.java:128)
+	at de.odysseus.staxon.base.AbstractXMLStreamReader.initialize(AbstractXMLStreamReader.java:216)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.<init>(JsonXMLStreamReader.java:65)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:139)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:120)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:44)
+	at org.mule.module.json.transformers.JsonToXml.doTransform(JsonToXml.java:55)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:415)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:366)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1617)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1516)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1490)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1482)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:114)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:107)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:58)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:123)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:208)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:201)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:200)
+	at org.mule.work.AbstractMuleEvent...
+********************************************************************************
+
+2017-01-20 14:27:41,334 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/Employee.json
+2017-01-20 14:27:41,338 [[json-xml].json-xmlFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=800da761-deee-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Employee.json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=122
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Employee.json
+    timestamp=1484902660000
+  OUTBOUND scoped properties:
+    filename=Employee.json
+  SESSION scoped properties:
+}
+2017-01-20 14:27:41,348 [[json-xml].json-xmlFlow.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : StAXSource(XMLStreamReader) with XMLStreamReadernot in XMLStreamConstants.START_DOCUMENT or XMLStreamConstants.START_ELEMENT state (java.lang.IllegalStateException)
+Type                  : org.mule.api.transformer.TransformerException
+Code                  : MULE_ERROR-64999
+JavaDoc               : http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html
+Transformer           : JsonToXml{this=1abebef3, name='JsonToString', ignoreBadInput=false, returnClass=SimpleDataType{type=java.lang.String, mimeType='text/xml', encoding='null'}, sourceTypes=[SimpleDataType{type=java.lang.String, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.InputStream, mimeType='*/*', encoding='null'}, SimpleDataType{type=[B, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.Reader, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.net.URL, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.File, mimeType='*/*', encoding='null'}]}
+********************************************************************************
+Exception stack is:
+1. StAXSource(XMLStreamReader) with XMLStreamReadernot in XMLStreamConstants.START_DOCUMENT or XMLStreamConstants.START_ELEMENT state (java.lang.IllegalStateException)
+  javax.xml.transform.stax.StAXSource:155 (null)
+2. StAXSource(XMLStreamReader) with XMLStreamReadernot in XMLStreamConstants.START_DOCUMENT or XMLStreamConstants.START_ELEMENT state (java.lang.IllegalStateException) (org.mule.api.transformer.TransformerException)
+  org.mule.module.json.transformers.JsonToXml:67 (http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html)
+********************************************************************************
+Root Exception stack trace:
+java.lang.IllegalStateException: StAXSource(XMLStreamReader) with XMLStreamReadernot in XMLStreamConstants.START_DOCUMENT or XMLStreamConstants.START_ELEMENT state
+	at javax.xml.transform.stax.StAXSource.<init>(StAXSource.java:155)
+	at org.mule.module.json.transformers.JsonToXml.doTransform(JsonToXml.java:55)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:415)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:366)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1617)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1516)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1490)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1482)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:114)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:107)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:58)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:123)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:208)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:201)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:200)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:49)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+********************************************************************************
+
+2017-01-20 14:28:32,349 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/.Employee.json.swp
+2017-01-20 14:28:32,356 [[json-xml].json-xmlFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=9e75ecd1-deee-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=.Employee.json.swp
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=4096
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=.Employee.json.swp
+    timestamp=1484902712000
+  OUTBOUND scoped properties:
+    filename=.Employee.json.swp
+  SESSION scoped properties:
+}
+2017-01-20 14:28:32,363 [[json-xml].json-xmlFlow.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : java.io.IOException: Illegal character: <b> (javax.xml.stream.XMLStreamException)
+Type                  : org.mule.api.transformer.TransformerException
+Code                  : MULE_ERROR-64999
+JavaDoc               : http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html
+Transformer           : JsonToXml{this=1abebef3, name='JsonToString', ignoreBadInput=false, returnClass=SimpleDataType{type=java.lang.String, mimeType='text/xml', encoding='null'}, sourceTypes=[SimpleDataType{type=java.lang.String, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.InputStream, mimeType='*/*', encoding='null'}, SimpleDataType{type=[B, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.Reader, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.net.URL, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.File, mimeType='*/*', encoding='null'}]}
+********************************************************************************
+Exception stack is:
+1. Illegal character: <b> (java.io.IOException)
+  de.odysseus.staxon.json.stream.impl.Yylex:641 (null)
+2. java.io.IOException: Illegal character: <b> (javax.xml.stream.XMLStreamException)
+  de.odysseus.staxon.base.AbstractXMLStreamReader:218 (http://java.sun.com/j2ee/sdk_1.3/techdocs/api/javax/xml/stream/XMLStreamException.html)
+3. java.io.IOException: Illegal character: <b> (javax.xml.stream.XMLStreamException) (org.mule.api.transformer.TransformerException)
+  org.mule.module.json.transformers.JsonToXml:67 (http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html)
+********************************************************************************
+Root Exception stack trace:
+java.io.IOException: Illegal character: <b>
+	at de.odysseus.staxon.json.stream.impl.Yylex.yylex(Yylex.java:641)
+	at de.odysseus.staxon.json.stream.impl.Yylex.nextSymbol(Yylex.java:271)
+	at de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl.next(JsonStreamSourceImpl.java:107)
+	at de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl.peek(JsonStreamSourceImpl.java:250)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.consume(JsonXMLStreamReader.java:128)
+	at de.odysseus.staxon.base.AbstractXMLStreamReader.initialize(AbstractXMLStreamReader.java:216)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.<init>(JsonXMLStreamReader.java:65)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:139)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:120)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:44)
+	at org.mule.module.json.transformers.JsonToXml.doTransform(JsonToXml.java:55)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:415)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:366)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1617)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1516)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1490)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1482)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:114)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:107)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:58)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:123)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:208)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:201)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:200)
+	at org.mule.work.AbstractMuleEvent...
+********************************************************************************
+
+2017-01-20 14:28:56,356 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/Employee.xml
+2017-01-20 14:28:56,361 [[json-xml].json-xmlFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=acc54151-deee-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Employee.xml
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=123
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Employee.xml
+    timestamp=1484902180000
+  OUTBOUND scoped properties:
+    filename=Employee.xml
+  SESSION scoped properties:
+}
+2017-01-20 14:28:56,416 [[json-xml].json-xmlFlow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=acc54151-deee-11e6-b2d5-b0c090693f65
+  payload=java.lang.String
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Employee.xml
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=123
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Employee.xml
+    timestamp=1484902180000
+  OUTBOUND scoped properties:
+    filename=Employee.xml
+  SESSION scoped properties:
+}
+2017-01-20 14:28:56,451 [[json-xml].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1904683841'. Object is: FileMessageDispatcher
+2017-01-20 14:28:56,452 [[json-xml].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1904683841'. Object is: FileMessageDispatcher
+2017-01-20 14:28:56,456 [[json-xml].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: /home/xcaliber/Vitthal/xcaliber documents/FTP/Output/Employee.xml
+2017-01-20 14:30:42,383 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/Product2.json
+2017-01-20 14:30:42,389 [[json-xml].json-xmlFlow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=ebf789f1-deee-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product2.json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=31
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product2.json
+    timestamp=1484902079000
+  OUTBOUND scoped properties:
+    filename=Product2.json
+  SESSION scoped properties:
+}
+2017-01-20 14:30:42,401 [[json-xml].json-xmlFlow.stage1.03] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : java.io.IOException: Illegal character: <<> (javax.xml.stream.XMLStreamException)
+Type                  : org.mule.api.transformer.TransformerException
+Code                  : MULE_ERROR-64999
+JavaDoc               : http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html
+Transformer           : JsonToXml{this=1abebef3, name='JsonToString', ignoreBadInput=false, returnClass=SimpleDataType{type=java.lang.String, mimeType='text/xml', encoding='null'}, sourceTypes=[SimpleDataType{type=java.lang.String, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.InputStream, mimeType='*/*', encoding='null'}, SimpleDataType{type=[B, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.Reader, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.net.URL, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.File, mimeType='*/*', encoding='null'}]}
+********************************************************************************
+Exception stack is:
+1. Illegal character: <<> (java.io.IOException)
+  de.odysseus.staxon.json.stream.impl.Yylex:641 (null)
+2. java.io.IOException: Illegal character: <<> (javax.xml.stream.XMLStreamException)
+  de.odysseus.staxon.base.AbstractXMLStreamReader:218 (http://java.sun.com/j2ee/sdk_1.3/techdocs/api/javax/xml/stream/XMLStreamException.html)
+3. java.io.IOException: Illegal character: <<> (javax.xml.stream.XMLStreamException) (org.mule.api.transformer.TransformerException)
+  org.mule.module.json.transformers.JsonToXml:67 (http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html)
+********************************************************************************
+Root Exception stack trace:
+java.io.IOException: Illegal character: <<>
+	at de.odysseus.staxon.json.stream.impl.Yylex.yylex(Yylex.java:641)
+	at de.odysseus.staxon.json.stream.impl.Yylex.nextSymbol(Yylex.java:271)
+	at de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl.next(JsonStreamSourceImpl.java:107)
+	at de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl.peek(JsonStreamSourceImpl.java:250)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.consume(JsonXMLStreamReader.java:128)
+	at de.odysseus.staxon.base.AbstractXMLStreamReader.initialize(AbstractXMLStreamReader.java:216)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.<init>(JsonXMLStreamReader.java:65)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:139)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:120)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:44)
+	at org.mule.module.json.transformers.JsonToXml.doTransform(JsonToXml.java:55)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:415)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:366)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1617)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1516)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1490)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1482)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:114)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:107)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:58)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:123)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:208)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:201)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:200)
+	at org.mule.work.AbstractMuleEvent...
+********************************************************************************
+
+2017-01-20 14:31:15,392 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/Product (copy).json
+2017-01-20 14:31:15,394 [[json-xml].json-xmlFlow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=ffa45001-deee-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=646
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+    timestamp=1484902063000
+  OUTBOUND scoped properties:
+    filename=Product (copy).json
+  SESSION scoped properties:
+}
+2017-01-20 14:31:15,403 [[json-xml].json-xmlFlow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=ffa45001-deee-11e6-b2d5-b0c090693f65
+  payload=java.lang.String
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=646
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+    timestamp=1484902063000
+  OUTBOUND scoped properties:
+    filename=Product (copy).json
+  SESSION scoped properties:
+}
+2017-01-20 14:31:15,407 [[json-xml].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: /home/xcaliber/Vitthal/xcaliber documents/FTP/Output/Product (copy).json
+2017-01-20 14:32:11,404 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/Product (copy).json
+2017-01-20 14:32:11,411 [[json-xml].json-xmlFlow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=210737d1-deef-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=646
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+    timestamp=1484902922000
+  OUTBOUND scoped properties:
+    filename=Product (copy).json
+  SESSION scoped properties:
+}
+2017-01-20 14:32:11,420 [[json-xml].json-xmlFlow.stage1.03] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : java.io.IOException: Unexpected symbol: START_OBJECT (javax.xml.stream.XMLStreamException)
+Type                  : org.mule.api.transformer.TransformerException
+Code                  : MULE_ERROR-64999
+JavaDoc               : http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html
+Transformer           : JsonToXml{this=1abebef3, name='JsonToString', ignoreBadInput=false, returnClass=SimpleDataType{type=java.lang.String, mimeType='text/xml', encoding='null'}, sourceTypes=[SimpleDataType{type=java.lang.String, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.InputStream, mimeType='*/*', encoding='null'}, SimpleDataType{type=[B, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.Reader, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.net.URL, mimeType='*/*', encoding='null'}, SimpleDataType{type=java.io.File, mimeType='*/*', encoding='null'}]}
+********************************************************************************
+Exception stack is:
+1. Unexpected symbol: START_OBJECT (java.io.IOException)
+  de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl:160 (null)
+2. java.io.IOException: Unexpected symbol: START_OBJECT (javax.xml.stream.XMLStreamException)
+  de.odysseus.staxon.base.AbstractXMLStreamReader:218 (http://java.sun.com/j2ee/sdk_1.3/techdocs/api/javax/xml/stream/XMLStreamException.html)
+3. java.io.IOException: Unexpected symbol: START_OBJECT (javax.xml.stream.XMLStreamException) (org.mule.api.transformer.TransformerException)
+  org.mule.module.json.transformers.JsonToXml:67 (http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/transformer/TransformerException.html)
+********************************************************************************
+Root Exception stack trace:
+java.io.IOException: Unexpected symbol: START_OBJECT
+	at de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl.next(JsonStreamSourceImpl.java:160)
+	at de.odysseus.staxon.json.stream.impl.JsonStreamSourceImpl.peek(JsonStreamSourceImpl.java:250)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.consume(JsonXMLStreamReader.java:128)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.consume(JsonXMLStreamReader.java:161)
+	at de.odysseus.staxon.base.AbstractXMLStreamReader.initialize(AbstractXMLStreamReader.java:216)
+	at de.odysseus.staxon.json.JsonXMLStreamReader.<init>(JsonXMLStreamReader.java:65)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:139)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:120)
+	at de.odysseus.staxon.json.JsonXMLInputFactory.createXMLStreamReader(JsonXMLInputFactory.java:44)
+	at org.mule.module.json.transformers.JsonToXml.doTransform(JsonToXml.java:55)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:415)
+	at org.mule.transformer.AbstractTransformer.transform(AbstractTransformer.java:366)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1617)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1516)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1490)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1482)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:114)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:107)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:24)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:58)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:47)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:123)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:208)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:201)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:200)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:49)
+	at or...
+********************************************************************************
+
+2017-01-20 14:32:55,414 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/Product (copy).json
+2017-01-20 14:32:55,419 [[json-xml].json-xmlFlow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=3b429c71-deef-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=341
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+    timestamp=1484902966000
+  OUTBOUND scoped properties:
+    filename=Product (copy).json
+  SESSION scoped properties:
+}
+2017-01-20 14:32:55,425 [[json-xml].json-xmlFlow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=3b429c71-deef-11e6-b2d5-b0c090693f65
+  payload=java.lang.String
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=341
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+    timestamp=1484902966000
+  OUTBOUND scoped properties:
+    filename=Product (copy).json
+  SESSION scoped properties:
+}
+2017-01-20 14:32:55,427 [[json-xml].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: /home/xcaliber/Vitthal/xcaliber documents/FTP/Output/Product (copy).json
+2017-01-20 14:33:52,427 [[json-xml].connector.file.mule.default.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: /home/xcaliber/Vitthal/xcaliber documents/FTP/Input/Product (copy).json
+2017-01-20 14:33:52,430 [[json-xml].json-xmlFlow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=5d3df3b1-deef-11e6-b2d5-b0c090693f65
+  payload=org.mule.transport.file.ReceiverFileInputStream
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=303
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+    timestamp=1484903024000
+  OUTBOUND scoped properties:
+    filename=Product (copy).json
+  SESSION scoped properties:
+}
+2017-01-20 14:33:52,440 [[json-xml].json-xmlFlow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=5d3df3b1-deef-11e6-b2d5-b0c090693f65
+  payload=java.lang.String
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+  INBOUND scoped properties:
+    MULE_ORIGINATING_ENDPOINT=endpoint.file.home.xcaliber.Vitthal.xcaliber documents.FTP.Input
+    directory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    fileSize=303
+    originalDirectory=/home/xcaliber/Vitthal/xcaliber documents/FTP/Input
+    originalFilename=Product (copy).json
+    timestamp=1484903024000
+  OUTBOUND scoped properties:
+    filename=Product (copy).json
+  SESSION scoped properties:
+}
+2017-01-20 14:33:52,445 [[json-xml].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: /home/xcaliber/Vitthal/xcaliber documents/FTP/Output/Product (copy).json

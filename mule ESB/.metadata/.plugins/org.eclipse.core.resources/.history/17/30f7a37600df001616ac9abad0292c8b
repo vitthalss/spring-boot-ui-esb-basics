@@ -1,0 +1,6 @@
+package com.xcaliber.soap;
+
+@WebService
+public class HelloWorldService {
+
+}

@@ -1,0 +1,5 @@
+#Fri Jan 20 13:15:46 IST 2017
+redeployment.enabled=true
+encoding=UTF-8
+config.resources=Json-xml.xml
+domain=default
