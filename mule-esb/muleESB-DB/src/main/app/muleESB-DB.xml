@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:jdbc="http://www.mulesoft.org/schema/mule/jdbc"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml"
+	xmlns:jdbc-ee="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/jdbc http://www.mulesoft.org/schema/mule/ee/jdbc/current/mule-jdbc-ee.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd">
+
+	<jdbc-ee:postgresql-data-source name="PostgreSQL_Data_Source"
+		user="postgres" password="postgres" url="jdbc:postgresql://localhost:5432/postgres"
+		transactionIsolation="UNSPECIFIED" doc:name="PostgreSQL Data Source"></jdbc-ee:postgresql-data-source>
+		<jdbc-ee:connector name="Database" dataSource-ref="PostgreSQL_Data_Source"
+			validateConnections="true" queryTimeout="-1" pollingFrequency="0"
+			doc:name="Database" doc:description="QUERY NOTES">
+        <jdbc-ee:query key="myusers" value="select * from users;"/>
+		</jdbc-ee:connector>
+    <db:generic-config name="Generic_Database_Configuration" url="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=postgres" driverClassName="org.postgresql.Driver" doc:name="Generic Database Configuration"/>
+
+	<flow name="muleESB-DBFlow">
+        <poll doc:name="Poll">
+            <db:select config-ref="Generic_Database_Configuration" doc:name="Database">
+                <db:parameterized-query><![CDATA[select * from users;]]></db:parameterized-query>
+            </db:select>
+        </poll>
+		<mulexml:object-to-xml-transformer
+			doc:name="Object to XML"></mulexml:object-to-xml-transformer>
+		<file:outbound-endpoint responseTimeout="10000"
+			doc:name="File" path="/home/xcaliber/Vitthal/MuleESB/MuleESB-DB"></file:outbound-endpoint>
+	</flow>
+</mule>
