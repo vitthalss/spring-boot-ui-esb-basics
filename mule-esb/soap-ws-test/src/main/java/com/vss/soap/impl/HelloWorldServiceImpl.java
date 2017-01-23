@@ -1,4 +1,4 @@
-package com.xcaliber.soap.impl;
+package com.vss.soap.impl;
 
 
 public class HelloWorldServiceImpl {

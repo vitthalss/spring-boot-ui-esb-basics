@@ -1,4 +1,4 @@
-package com.xcaliber.rest;
+package com.vss.rest;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;

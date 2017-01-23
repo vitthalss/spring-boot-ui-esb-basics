@@ -11,7 +11,7 @@ http://www.mulesoft.org/schema/mule/jersey http://www.mulesoft.org/schema/mule/j
     <flow name="rest-ws-testFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/*" doc:name="HTTP"/>
         <jersey:resources doc:name="REST">
-            <component class="com.xcaliber.rest.HelloService"/>
+            <component class="com.vss.rest.HelloService"/>
         </jersey:resources>
     </flow>
 </mule>

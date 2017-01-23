@@ -12,7 +12,7 @@ http://www.mulesoft.org/schema/mule/cxf http://www.mulesoft.org/schema/mule/cxf/
         <http:listener config-ref="HTTP_Listener_Configuration" path="/*" doc:name="HTTP">
             <http:response-builder statusCode="200" reasonPhrase="OK Passed"/>
         </http:listener>
-        <cxf:jaxws-service doc:name="CXF" serviceClass="com.xcaliber.soap.HelloWorldService"/>
-        <component class="com.xcaliber.soap.impl.HelloWorldServiceImpl" doc:name="Java"/>
+        <cxf:jaxws-service doc:name="CXF" serviceClass="com.vss.soap.HelloWorldService"/>
+        <component class="com.vss.soap.impl.HelloWorldServiceImpl" doc:name="Java"/>
     </flow>
 </mule>
