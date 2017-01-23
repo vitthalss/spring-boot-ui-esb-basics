@@ -10,10 +10,10 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
 http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
     <flow name="xml-JSON">
-        <file:inbound-endpoint path="/home/xcaliber/Vitthal/xcaliber documents/FTP/Input" responseTimeout="10000" doc:name="File"/>
+        <file:inbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/FTP/Input" responseTimeout="10000" doc:name="File"/>
         <logger message="#[payload]" level="INFO" doc:name="Logger"/>
         <json:xml-to-json-transformer doc:name="XML to JSON"/>
         <logger message="#[payload]" level="INFO" doc:name="Logger"/>
-        <file:outbound-endpoint path="/home/xcaliber/Vitthal/xcaliber documents/FTP/Output" responseTimeout="10000" doc:name="File"/>
+        <file:outbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/FTP/Output" responseTimeout="10000" doc:name="File"/>
     </flow>
 </mule>
