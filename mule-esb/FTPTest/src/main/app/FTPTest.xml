@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:jdbc-ee="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd http://www.mulesoft.org/schema/mule/ee/jdbc http://www.mulesoft.org/schema/mule/ee/jdbc/current/mule-jdbc-ee.xsd http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd">
+    <jdbc-ee:postgresql-data-source name="PostgreSQL_Data_Source" user="postgres" password="postgres" url="jdbc:postgresql://localhost:5432/postgres" transactionIsolation="UNSPECIFIED" doc:name="PostgreSQL Data Source"></jdbc-ee:postgresql-data-source>
+    <jdbc-ee:connector name="Database" dataSource-ref="PostgreSQL_Data_Source" validateConnections="true" queryTimeout="-1" pollingFrequency="0" doc:name="Database" doc:description="QUERY NOTES"> 
+        <jdbc-ee:query key="myusers" value="select * from users;"></jdbc-ee:query>  
+    </jdbc-ee:connector>
+    <db:generic-config name="Generic_Database_Configuration" url="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=postgres" driverClassName="org.postgresql.Driver" doc:name="Generic Database Configuration"></db:generic-config>
+    <ftp:connector name="FTP" fileAge="5" pollingFrequency="10" validateConnections="true" doc:name="FTP"></ftp:connector>
+    <flow name="FTPTestFlow"> 
+        <poll doc:name="Poll"> 
+            <db:select config-ref="Generic_Database_Configuration" doc:name="Database"> 
+                <db:parameterized-query><![CDATA[select * from users;]]></db:parameterized-query>  
+            </db:select>  
+        </poll>  
+        <logger message="Poll has started...000XXXXXXXXXXXXXXXXXX000" level="INFO" doc:name="Logger"></logger>  
+        <json:object-to-json-transformer doc:name="Object to JSON"></json:object-to-json-transformer>  
+        <echo-component doc:name="Echo"></echo-component>  
+        <logger message="Transformed JSON is coping  on FTP...000XXXXXXXXXXXXXXXXXX000" level="INFO" doc:name="Logger"></logger>  
+        <file:outbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Destination" responseTimeout="10000" doc:name="File"></file:outbound-endpoint>  
+    </flow>
+</mule>
