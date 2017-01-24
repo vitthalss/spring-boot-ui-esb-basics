@@ -9,7 +9,7 @@
         <jdbc-ee:query key="myusers" value="select * from users;"></jdbc-ee:query>  
     </jdbc-ee:connector>
     <db:generic-config name="Generic_Database_Configuration" url="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=postgres" driverClassName="org.postgresql.Driver" doc:name="Generic Database Configuration"></db:generic-config>
-    <ftp:connector name="FTP" fileAge="5" pollingFrequency="10" validateConnections="true" doc:name="FTP"></ftp:connector>
+    <ftp:connector name="FTP" fileAge="500" pollingFrequency="1000" validateConnections="true" doc:name="FTP"></ftp:connector>
     <flow name="FTPTestFlow"> 
         <poll doc:name="Poll"> 
             <db:select config-ref="Generic_Database_Configuration" doc:name="Database"> 
@@ -20,6 +20,7 @@
         <json:object-to-json-transformer doc:name="Object to JSON"></json:object-to-json-transformer>  
         <echo-component doc:name="Echo"></echo-component>  
         <logger message="Transformed JSON is coping  on FTP...000XXXXXXXXXXXXXXXXXX000" level="INFO" doc:name="Logger"></logger>  
+        <ftp:outbound-endpoint host="localhost" port="21" responseTimeout="10000" doc:name="FTP"></ftp:outbound-endpoint>  
         <file:outbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Destination" responseTimeout="10000" doc:name="File"></file:outbound-endpoint>  
     </flow>
 </mule>
