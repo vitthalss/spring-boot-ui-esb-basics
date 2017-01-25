@@ -24,12 +24,14 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
         </poll>
         <logger level="INFO" doc:name="Logger" message="DB-DB...Transfer...0000000000XXXXXXXXXXXX000000000.1"/>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <json:json-to-object-transformer returnClass="java.lang.Object" doc:name="JSON to Object"/>
+        <logger message="#[payload.get(0)['username']]  000000000000000000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
         <db:insert config-ref="Generic_Database_Configuration1" doc:name="Database">
-            <db:dynamic-query><![CDATA[INSERT INTO public.users (username, email, password, activated, activationkey, resetpasswordkey, inspectorid) VALUES ('vss2', 'vss@mail.me', '3e5c7e76fefc60ba426a4b4b8a5c3bd594986fc2004ac0a91234bbea75e6bc6891ab6a81718fdd6c', true, null, null, '000');]]></db:dynamic-query>
+            <db:dynamic-query><![CDATA[INSERT INTO public.users (username, email, password, activated, activationkey, resetpasswordkey, inspectorid) VALUES ('vss1', 'vss@mail.me', '3e5c7e76fefc60ba426a4b4b8a5c3bd594986fc2004ac0a91234bbea75e6bc6891ab6a81718fdd6c', true, null, null, '000');]]></db:dynamic-query>
         </db:insert>
         <logger message="insertion0000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
         <db:delete config-ref="Generic_Database_Configuration1" doc:name="Database">
-            <db:parameterized-query><![CDATA[delete from users where username in ('vss1','vss3')]]></db:parameterized-query>
+            <db:parameterized-query><![CDATA[delete from users where username in ('vss2')]]></db:parameterized-query>
         </db:delete>
         <logger message="deletion0000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
         <db:select config-ref="Generic_Database_Configuration1" doc:name="Database">
