@@ -36,7 +36,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
             </batch:step>
         </batch:process-records>
         <batch:on-complete>
-            <logger message="BATCH PROCESS Completed...$$$$$" level="INFO" doc:name="Logger"/>
+            <logger message="BATCH PROCESS COMPLETED$$$$$$$$$$$$$$$$$$$$" level="INFO" doc:name="Logger"/>
         </batch:on-complete>
     </batch:job>
     <flow name="BATCHFlow">
