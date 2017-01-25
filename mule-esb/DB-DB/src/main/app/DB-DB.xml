@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:jdbc-ee="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:jdbc-ee="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:spring="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/ee/jdbc http://www.mulesoft.org/schema/mule/ee/jdbc/current/mule-jdbc-ee.xsd
-http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
     <jdbc-ee:postgresql-data-source name="PostgreSQL_Data_Source" user="postgres" password="postgres" url="jdbc:postgresql://localhost:5432/postgres" transactionIsolation="UNSPECIFIED" doc:name="PostgreSQL Data Source" doc:description="DB-DB NOTES POSTGRES"/>
     <jdbc-ee:connector name="Database" dataSource-ref="PostgreSQL_Data_Source" validateConnections="true" queryTimeout="-1" pollingFrequency="0" doc:name="Database" doc:description="POSTGRES NOTES">
         <jdbc-ee:query key="mydata" value="select * from user"/>
@@ -24,7 +25,17 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <logger level="INFO" doc:name="Logger" message="DB-DB...Transfer...0000000000XXXXXXXXXXXX000000000.1"/>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
         <db:insert config-ref="Generic_Database_Configuration1" doc:name="Database">
-            <db:dynamic-query><![CDATA[INSERT INTO public.users (username, email, password, activated, activationkey, resetpasswordkey, inspectorid) VALUES ('vss', 'vss@mail.me', '3e5c7e76fefc60ba426a4b4b8a5c3bd594986fc2004ac0a91234bbea75e6bc6891ab6a81718fdd6c', true, null, null, '000');]]></db:dynamic-query>
+            <db:dynamic-query><![CDATA[INSERT INTO public.users (username, email, password, activated, activationkey, resetpasswordkey, inspectorid) VALUES ('vss2', 'vss@mail.me', '3e5c7e76fefc60ba426a4b4b8a5c3bd594986fc2004ac0a91234bbea75e6bc6891ab6a81718fdd6c', true, null, null, '000');]]></db:dynamic-query>
         </db:insert>
+        <logger message="insertion0000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
+        <db:delete config-ref="Generic_Database_Configuration1" doc:name="Database">
+            <db:parameterized-query><![CDATA[delete from users where username in ('vss1','vss3')]]></db:parameterized-query>
+        </db:delete>
+        <logger message="deletion0000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
+        <db:select config-ref="Generic_Database_Configuration1" doc:name="Database">
+            <db:parameterized-query><![CDATA[select * from users order by 1 desc;]]></db:parameterized-query>
+        </db:select>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <file:outbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Destination" responseTimeout="10000" doc:name="File"/>
     </flow>
 </mule>
