@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:jdbc-ee="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+<mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:jdbc-ee="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:spring="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
@@ -10,7 +10,8 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
 http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
 http://www.mulesoft.org/schema/mule/ee/jdbc http://www.mulesoft.org/schema/mule/ee/jdbc/current/mule-jdbc-ee.xsd
 http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
-http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd">
     <jdbc-ee:postgresql-data-source name="PostgreSQL_Data_Source-Postgres" user="postgres" password="postgres" url="jdbc:postgresql://localhost:5432/postgres" transactionIsolation="UNSPECIFIED" doc:name="PostgreSQL Data Source" doc:description="PostgreSQL_Data_Source-Postgres"/>
     <jdbc-ee:connector name="Database-Postgres" dataSource-ref="PostgreSQL_Data_Source-Postgres" validateConnections="true" queryTimeout="-1" pollingFrequency="0" doc:name="Database" doc:description="Database-Postgres">
         <jdbc-ee:query key="mydata" value="select * from users;"/>
@@ -21,35 +22,21 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
     <db:generic-config name="Generic_Database_Configuration-Phoenix" url="jdbc:postgresql://localhost:5432/phoenix?user=postgres&amp;password=postgres" driverClassName="org.postgresql.Driver" doc:name="Generic Database Configuration" doc:description="Generic_Database_Configuration-Phoenix"/>
     <batch:job name="mule-esb-etlBatch">
         <batch:input>
-            <db:select config-ref="Generic_Database_Configuration-Postgres" doc:name="Capture Changed Records Postgres">
-                <db:parameterized-query><![CDATA[select * from users where  username='vss';]]></db:parameterized-query>
+            <db:select config-ref="Generic_Database_Configuration-Postgres" doc:name="Postgres Records">
+                <db:parameterized-query><![CDATA[select * from users order by 1 desc;]]></db:parameterized-query>
             </db:select>
         </batch:input>
         <batch:process-records>
-            <batch:step name="BATCH-STEP1">
-                <json:object-to-json-transformer doc:name="Object to JSON"/>
-                <db:delete config-ref="Generic_Database_Configuration-Phoenix" doc:name="Database Phoenix">
-                    <db:parameterized-query><![CDATA[delete from users where username='vss-2']]></db:parameterized-query>
-                </db:delete>
-                <logger message="The record deletion is successful.....!00000000000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
-            </batch:step>
-            <batch:step name="Transform-QueryOrderStatus">
-                <db:update config-ref="Generic_Database_Configuration-Phoenix" doc:name="Query user status">
-                    <db:parameterized-query><![CDATA[update users set email='vss@gmail.com' where username='vss']]></db:parameterized-query>
-                </db:update>
-                <logger message="The user has been updated..!!" level="INFO" doc:name="Logger"/>
-            </batch:step>
-            <batch:step name="Load-Status">
-                <db:insert config-ref="Generic_Database_Configuration-Phoenix" doc:name="Insert into Status Report Phoenix">
-                    <db:parameterized-query><![CDATA[INSERT INTO public.users (username, email, password, activated, activationkey, resetpasswordkey, inspectorid) VALUES ('vss-1', 'vss@mail.me', '3e5c7e76fefc60ba426a4b4b8a5c3bd594986fc2004ac0a91234bbea75e6bc6891ab6a81718fdd6c', true, null, null, '000');
-
-INSERT INTO public.users (username, email, password, activated, activationkey, resetpasswordkey, inspectorid) VALUES ('vss-2', 'vss@mail.me', '3e5c7e76fefc60ba426a4b4b8a5c3bd594986fc2004ac0a91234bbea75e6bc6891ab6a81718fdd6c', true, null, null, '000');]]></db:parameterized-query>
-                </db:insert>
-                <logger message="The user has been inserted..!!" level="INFO" doc:name="Logger"/>
+            <batch:step name="Batch_Step1">
+                <db:select config-ref="Generic_Database_Configuration-Phoenix" doc:name="Database">
+                    <db:parameterized-query><![CDATA[select * from users;]]></db:parameterized-query>
+                </db:select>
+                <mulexml:object-to-xml-transformer doc:name="Object to XML"/>
+                <file:outbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Batch/ETL/Output" responseTimeout="10000" doc:name="File"/>
             </batch:step>
         </batch:process-records>
         <batch:on-complete>
-            <logger message="The batch transformation completed..!!" level="INFO" doc:name="Log Status"/>
+            <logger message="The batch process completed000000000000000000000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
         </batch:on-complete>
     </batch:job>
     <flow name="mule-esb-etlFlow">
