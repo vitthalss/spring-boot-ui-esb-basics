@@ -27,7 +27,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
                 <file:outbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Batch/Output/Batch1" responseTimeout="10000" doc:name="File"/>
                 <logger level="INFO" doc:name="Logger" message="BATCH STEP1 COMPLETED$$$$$$$$$$$$$$$$$$$$"/>
             </batch:step>
-            <batch:step name="Batch_Step">
+            <batch:step name="BATCH-STEP-0.1">
                 <json:object-to-json-transformer doc:name="Object to JSON"/>
             </batch:step>
             <batch:step name="BATCH-STEP1">
