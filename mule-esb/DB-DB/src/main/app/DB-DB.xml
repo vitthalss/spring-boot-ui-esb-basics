@@ -23,7 +23,7 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
             </db:select>
         </poll>
         <logger level="INFO" doc:name="Logger" message="DB-DB...Transfer...0000000000XXXXXXXXXXXX000000000.1"/>
-        <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <set-payload value="#[payload]" doc:name="Set Payload"/>
         <json:json-to-object-transformer returnClass="java.lang.Object" doc:name="JSON to Object"/>
         <logger message="#[payload.get(0)['username']]  000000000000000000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
         <db:insert config-ref="Generic_Database_Configuration1" doc:name="Database">
