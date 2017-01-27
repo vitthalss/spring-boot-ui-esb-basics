@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:jdbc="http://www.mulesoft.org/schema/mule/jdbc" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/jdbc http://www.mulesoft.org/schema/mule/jdbc/current/mule-jdbc.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+    <jdbc:postgresql-data-source name="PostgreSQL_Data_Source-Postgres" user="postgres" password="postgres" url="jdbc:postgresql://localhost:5432/postgres" transactionIsolation="UNSPECIFIED" doc:name="PostgreSQL Data Source" doc:description="PostgreSQL_Data_Source-Postgres"/>
+    <db:generic-config name="Generic_Database_Configuration-Postgres" url="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=postgres" driverClassName="org.postgresql.Driver" doc:name="Generic Database Configuration" doc:description="Generic_Database_Configuration-Postgres"/>
+    <jdbc:postgresql-data-source name="PostgreSQL_Data_Source-Phoenix" user="postgres" password="postgres" url="jdbc:postgresql://localhost:5432/phoenix" transactionIsolation="UNSPECIFIED" doc:name="PostgreSQL Data Source" doc:description="PostgreSQL_Data_Source-Phoenix"/>
+    <db:generic-config name="Generic_Database_Configuration-Phoenix" url="jdbc:postgresql://localhost:5432/phoenix?user=postgres&amp;password=postgres" driverClassName="org.postgresql.Driver" doc:name="Generic Database Configuration" doc:description="Generic_Database_Configuration-Phoenix"/>
+    <flow name="DB-DB-CEFlow">
+        <poll doc:name="Poll">
+            <db:select config-ref="Generic_Database_Configuration-Postgres" doc:name="Database">
+                <db:parameterized-query><![CDATA[select * from users order by 1 desc;]]></db:parameterized-query>
+            </db:select>
+        </poll>
+        <logger message="DB-DB...transfer has been started...0000000000XXXXXXXXXXXX000000000.1" level="INFO" doc:name="Logger"/>
+        <set-payload value="#[payload]" doc:name="Set Payload"/>
+        <json:json-to-object-transformer returnClass="java.lang.Object" doc:name="JSON to Object"/>
+        <logger message="#[payload.get(0)['username']]  000000000000000000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
+        <db:insert config-ref="Generic_Database_Configuration-Phoenix" doc:name="Database">
+            <db:parameterized-query><![CDATA[INSERT INTO public.users (username, email, password, activated, activationkey, resetpasswordkey, inspectorid) 
+VALUES (#[payload.get(0)["username"]]||108, 'vss@mail.me', '3e5c7e76fefc60ba426a4b4b8a5c3bd594986fc2004ac0a91234bbea75e6bc6891ab6a81718fdd6c', true, null, null, '000');]]></db:parameterized-query>
+        </db:insert>
+        <logger message="insertion0000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
+        <db:delete config-ref="Generic_Database_Configuration-Phoenix" doc:name="Database">
+            <db:parameterized-query><![CDATA[delete from users where username in ('user108');]]></db:parameterized-query>
+        </db:delete>
+        <logger message="deletion0000000000000000000000000000000000000000000" level="INFO" doc:name="Logger"/>
+        <db:select config-ref="Generic_Database_Configuration-Phoenix" doc:name="Database">
+            <db:parameterized-query><![CDATA[select * from users order by 1 desc;]]></db:parameterized-query>
+        </db:select>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <file:outbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Destination" responseTimeout="10000" doc:name="File"/>
+    </flow>
+</mule>
