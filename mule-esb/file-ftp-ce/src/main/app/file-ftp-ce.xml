@@ -7,8 +7,8 @@
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/ftp http://www.mulesoft.org/schema/mule/ftp/current/mule-ftp.xsd
 http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
-    <flow name="ftp-ceFlow">
-        <ftp:inbound-endpoint path="/" host="localhost" port="21" user="anonymous" responseTimeout="10000" doc:name="FTP"/>
-        <file:outbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/FTP/Output" responseTimeout="10000" doc:name="File"/>
+    <flow name="file-ftp-ceFlow">
+        <file:inbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Source" responseTimeout="10000" doc:name="File"/>      
+        <ftp:outbound-endpoint path="/" host="localhost" port="21" user="anonymous" responseTimeout="10000" doc:name="FTP"/>
     </flow>
 </mule>
