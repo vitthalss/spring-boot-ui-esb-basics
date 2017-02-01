@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration"/>
+    <db:generic-config name="Generic_Database_Configuration-Postgres" url="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=postgres" driverClassName="org.postgresql.Driver" doc:name="Generic Database Configuration"/>
+    <flow name="EXCEPTIONSFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/exceptions" doc:name="HTTP"/>
+        <scripting:component doc:name="Groovy">
+            <scripting:script engine="Groovy"><![CDATA[throw new java.lang.Exception('Exception occured in message flow')]]></scripting:script>
+        </scripting:component>
+        <db:select config-ref="Generic_Database_Configuration-Postgres" doc:name="Database">
+            <db:parameterized-query><![CDATA[select * from users;]]></db:parameterized-query>
+        </db:select>
+        <!-- <choice-exception-strategy doc:name="CHOICE-EXCEPTIONS">
+            <catch-exception-strategy when="#[exception.causedBy(java.lang.Exception)]" doc:name="EXCEPTION0">
+                <set-payload value="#['Lang Exception']" doc:name="Lang Exception"/>
+            </catch-exception-strategy>
+            <catch-exception-strategy doc:name="EXCEPTION1">
+                <set-payload value="#['Generic Exception']" doc:name="Generic Exception"/>
+            </catch-exception-strategy>
+        </choice-exception-strategy> -->
+       <exception-strategy ref="GLOBAL-EXCEPTIONS-CHOISE" doc:name="Reference Exception Strategy"/>
+    </flow>
+</mule>
