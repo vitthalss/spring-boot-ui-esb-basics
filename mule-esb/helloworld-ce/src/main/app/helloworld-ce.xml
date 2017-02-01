@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:schedulers="http://www.mulesoft.org/schema/mule/schedulers" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/schedulers http://www.mulesoft.org/schema/mule/schedulers/current/mule-schedulers.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8080" basePath="services" doc:name="HTTP Listener Configuration"/>
+    <db:generic-config name="Generic_Database_Configuration-Postgres" url="jdbc:postgresql://localhost:5432/postgres?user=postgres&amp;password=postgres" driverClassName="org.postgresql.Driver" doc:name="Generic Database Configuration"/>
+    <flow name="helloworld-ce">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/helloworld-ce" doc:name="HTTP" allowedMethods="GET,POST">
+            <http:response-builder statusCode="888" reasonPhrase="The test worked">
+                <http:header headerName="Senior-Java-Specialist" value="Vitthal Shirke"/>
+            </http:response-builder>
+            <http:error-response-builder statusCode="808" reasonPhrase="Method not found"/>
+        </http:listener>
+        <component class="com.vss.Greeting" doc:name="Java"/>
+        <logger message="111111111111111111111:#[payload]" level="INFO" doc:name="Logger"/>
+        <set-payload doc:name="Set Payload" value="Hello HTTP connector!!"/>
+        <flow-ref name="helloworld-ceFlow" doc:name="helloworld-ceFlow"/>
+    </flow>
+    <flow name="helloworld-ceFlow">
+        <poll doc:name="Poll">
+            <schedulers:cron-scheduler expression="0 0/1 * 1/1 * ? *"/>
+            <component class="com.vss.World" doc:name="Java"/>
+        </poll>
+        <logger message="222222222222222222222:#[payload]" level="INFO" doc:name="Logger"/>
+    </flow>
+</mule>
