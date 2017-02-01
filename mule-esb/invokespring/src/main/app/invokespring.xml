@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+
+	<spring:beans>
+		<spring:bean class="com.vss.invokespring.InvokeSpringSample"
+			name="invokeSpringSample">
+		</spring:bean>
+	</spring:beans>
+	<!-- <http:listener-config host="localhost" port="8081"
+		name="HTTP_Listner_Configuration" doc:name="HTTP Listner Configuration" /> -->
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration"/>
+	<flow name="invokeSpringSampleFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/invoke" doc:name="HTTP"/>
+		<invoke object-ref="invokeSpringSample" method="methodA" doc:name="Invoke Spring Bean Method A" />
+		<echo-component doc:name="Echo"/>
+		<invoke object-ref="invokeSpringSample" method="methodB" doc:name="Invoke Spring Bean Method B" />
+		<echo-component doc:name="Echo"/>
+		<invoke object-ref="invokeSpringSample" method="methodC" doc:name="Invoke Spring Bean Method C" methodArguments="#[message.inboundProperties.'http.query.params'.['name']], #[message.inboundProperties.'http.query.params'.['age']]" methodArgumentTypes="java.lang.String, java.lang.String"/>
+		<echo-component doc:name="Echo"/>
+
+	</flow>
+
+
+
+
+
+
+
+
+</mule>
