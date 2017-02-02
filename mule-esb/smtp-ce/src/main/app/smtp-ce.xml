@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+    <smtp:gmail-connector name="Gmail" fromAddress="urmailid@gmail.com" subject="MULE ESB SMTP TEST" validateConnections="true" doc:name="Gmail"/>
+    <smtp:connector name="SMTP" validateConnections="true" doc:name="SMTP"/>
+    <flow name="smtp-ceFlow">
+        <file:inbound-endpoint responseTimeout="10000" doc:name="File" path="/home/xcaliber/Vitthal/MuleESB/Source"/>
+        <logger level="INFO" doc:name="Logger" message="11111111111111111111:#[payload]"/>
+        <file:file-to-string-transformer doc:name="File to String"/>
+        <logger level="INFO" doc:name="Logger" message="22222222222222222222:#[payload]"/>
+        <set-attachment doc:name="Attachment" attachmentName="attachment" contentType="text/plain" value="#[payload]"/>
+        <logger level="INFO" doc:name="Logger" message="33333333333333333333:#[payload]"/>
+        <smtp:outbound-endpoint host="smtp.gmail.com" responseTimeout="10000" doc:name="SMTP" connector-ref="Gmail" from="urmailid@gmail.com" password="usrpassword" port="587" subject="MULE ESB SMTP TEST" to="urmailid@gmail.com" user="urmailid%40gmail.com"/>
+        <logger level="INFO" doc:name="Logger" message="44444444444444444444: #[payload]"/>
+    </flow>
+</mule>
