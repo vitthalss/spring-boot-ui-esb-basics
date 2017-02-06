@@ -8,14 +8,17 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
-    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration" basePath="services"/>
-    <!-- <db:generic-config name="Generic_Database_Configuration-Hive" url="jdbc:hive2://172.16.1.150:10000/att_rlo?user=hive&amp;password=hive@123" driverClassName="org.apache.hive.jdbc.HiveDriver" doc:name="Generic Database Configuration" doc:description="Generic_Database_Configuration-Hive"/> -->
-   <db:generic-config name="Generic_Database_Configuration-Hive" url="jdbc:hive2://172.16.1.75:10000/default?user=hive&amp;password=hive@123" driverClassName="org.apache.hive.jdbc.HiveDriver" doc:name="Generic Database Configuration" doc:description="Generic_Database_Configuration-Hive"/>
+
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8082" doc:name="HTTP Listener Configuration" basePath="services"/>
+    <!-- <http:listener-config name="HTTP_Listener_Configuration" host="10.0.1.60" port="8082" doc:name="HTTP Listener Configuration" basePath="services"/> -->
+    <db:generic-config name="Generic_Database_Configuration-Hive" url="jdbc:hive2://bbh-1432449493.us-east-1.elb.amazonaws.com:11983/att_rlo?user=hive&amp;password=hive@123" driverClassName="org.apache.hive.jdbc.HiveDriver" doc:name="Generic Database Configuration" doc:description="Generic_Database_Configuration-Hive"/> 
+    <!-- <db:generic-config name="Generic_Database_Configuration-Hive" url="jdbc:hive2://172.16.1.75:10000/default?user=hive&amp;password=hive@123" driverClassName="org.apache.hive.jdbc.HiveDriver" doc:name="Generic Database Configuration" doc:description="Generic_Database_Configuration-Hive"/>-->
    
-    <flow name="hdfsFlow">
+    <flow name="hive-ce">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/hive" doc:name="HTTP"/>
         <db:select config-ref="Generic_Database_Configuration-Hive" doc:name="Database">
-            <db:parameterized-query><![CDATA[select * from users]]></db:parameterized-query>
+            <db:parameterized-query><![CDATA[select * from table_rlo_receiving limit 10]]></db:parameterized-query>
+            <!--<db:parameterized-query><![CDATA[select * from users]]></db:parameterized-query>-->
         </db:select>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
         <logger message="#[payload]" level="INFO" doc:name="Logger"/>

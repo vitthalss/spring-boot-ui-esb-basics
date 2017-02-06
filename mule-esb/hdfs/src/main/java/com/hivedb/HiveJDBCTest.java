@@ -25,16 +25,19 @@ public class HiveJDBCTest {
     res = stmt.executeQuery(sql);
     while(res.next()) {
       try {
-		System.out.println(res.getInt("location_id"));
+		System.out.println("location_id : "+res.getInt("location_id"));
 	} catch (Exception e) {
+		System.out.println("Exception while fetching location_id !!");
 	}
       try {
-		System.out.println(res.getInt("location_code"));
+		System.out.println("location_code : "+res.getString("location_code"));
 	} catch (Exception e) {
+		System.out.println("Exception while fetching location_code !!");
 	}
       try {
-		System.out.println(res.getString("location_name"));
+		System.out.println("location_name : "+res.getString("location_name"));
 	} catch (Exception e) {
+		System.out.println("Exception while fetching location_name !!");
 	}
     }
     
