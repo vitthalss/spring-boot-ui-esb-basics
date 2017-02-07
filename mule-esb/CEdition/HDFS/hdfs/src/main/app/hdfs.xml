@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+<mule xmlns:jersey="http://www.mulesoft.org/schema/mule/jersey" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:spring="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
-http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/jersey http://www.mulesoft.org/schema/mule/jersey/current/mule-jersey.xsd">
 
     <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8082" doc:name="HTTP Listener Configuration" basePath="services"/>
+    
     
     <db:generic-config name="Generic_Database_Configuration-Hive" url="jdbc:hive2://xxx.xx.1.75:10000/default?user=hive&amp;password=hive@123" driverClassName="org.apache.hive.jdbc.HiveDriver" doc:name="Generic Database Configuration" doc:description="Generic_Database_Configuration-Hive"/>
    
     <flow name="hive-ce">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/hive" doc:name="HTTP"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/*" doc:name="HTTP"/>
+        <jersey:resources doc:name="REST">
+            <component class="com.att.rest.MuleHiveService"/>
+        </jersey:resources>
+        <logger message="1111111111111111111111111: #[message]  222222222222222222222222222222222::  #[message.inboundProperties.'http.request.uri'] 3333333333333333333333333:: #[message.inboundProperties.'http.query.params']  4444444444444444444444444444444:: #[message.inboundProperties.'http.query.string']   5555555555555555555555555555555:: #[message.inboundProperties.'http.relative.path']  5.000000000000000000000000:: #[message.inboundProperties.'http.query.params'.get('partnumber')]" level="INFO" doc:name="Logger"/>
         <db:select config-ref="Generic_Database_Configuration-Hive" doc:name="Database">
             <db:parameterized-query><![CDATA[select * from users]]></db:parameterized-query>
+            
         </db:select>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
-        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
