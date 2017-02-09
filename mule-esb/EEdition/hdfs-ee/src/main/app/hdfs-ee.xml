@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:hdfs="http://www.mulesoft.org/schema/mule/hdfs" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/hdfs http://www.mulesoft.org/schema/mule/hdfs/current/mule-hdfs.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+    <hdfs:config name="HDFS__Simple_Configuration" nameNodeUri="hdfs://xxx.xx.x.75:8020" username="default" doc:name="HDFS: Simple Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration"/>
+    <!-- <flow name="hdfs-eeFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
+        <hdfs:make-directories config-ref="HDFS__Simple_Configuration" path="/tmp/myhdfstest.txt" doc:name="HDFS"/>
+    </flow> -->
+    <flow name="hdfs-example-use-caseFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/createFile" doc:name="HTTP"/>
+        <hdfs:make-directories config-ref="HDFS__Simple_Configuration" path="/test.txt" doc:name="HDFS"/>
+    </flow>
+</mule>
