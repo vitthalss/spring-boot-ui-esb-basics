@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:jersey="http://www.mulesoft.org/schema/mule/jersey"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/jersey http://www.mulesoft.org/schema/mule/jersey/current/mule-jersey.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+
+	<db:generic-config
+		name="Generic_Database_Configuration-Hive-Wifi-Sniffing-Three"
+		url="jdbc:hive2://172.16.1.75:10000/default?user=hive&amp;password=hive@123"
+		driverClassName="org.apache.hive.jdbc.HiveDriver" doc:name="Generic Database Configuration"
+		doc:description="Generic_Database_Configuration-Hive" />
+
+	<flow name="ImportCSVFileToHiveDB-Wifi-Sniffing-Three">
+		<file:inbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Source"
+			responseTimeout="10000" doc:name="Source" />
+
+		<object-to-string-transformer doc:name="Object to String" />
+
+		<splitter expression="#[StringUtils.split(message.payload, '\n\r')]"
+			doc:name="Splitter" />
+
+		<expression-transformer doc:name="Expression"
+			expression="#[StringUtils.split(message.payload, ',')]" />
+
+		<db:insert config-ref="Generic_Database_Configuration-Hive-Wifi-Sniffing-Three"
+			doc:name="Database">
+			<db:parameterized-query><![CDATA[
+			insert into airodumpng_02_kismet_tbl
+				       (
+							network, net_type,	
+							ess_id,	 bss_id,
+							info,  channel,
+							cloaked, encryption,	
+							decrypted, max_rate,	
+							max_seen_rate, beacon,	
+							llc, data,	
+							crypt, weak,	
+							total, carrier,
+							encoding, first_time,
+							last_time, best_quality,
+							best_signal, best_noise,	
+							gps_min_lat, gps_min_lon,	
+							gps_min_alt, gps_min_spd,	
+							gps_max_lat, gps_max_lon,	
+							gps_max_alt, gps_max_spd,	
+							gps_best_lat, gps_best_lon,	
+							gps_best_alt, data_size,	
+							ip_type, ip
+				       )
+				 values(#[message.payload[0]], #[message.payload[1]], #[message.payload[2]], #[message.payload[3]],
+						#[message.payload[4]], #[message.payload[5]], #[message.payload[6]], #[message.payload[7]],
+						#[message.payload[8]], #[message.payload[9]], #[message.payload[10]], #[message.payload[11]],
+						#[message.payload[12]], #[message.payload[13]], #[message.payload[14]], #[message.payload[15]],
+						#[message.payload[16]], #[message.payload[17]], #[message.payload[18]], #[message.payload[19]],
+						#[message.payload[20]], #[message.payload[21]], #[message.payload[22]], #[message.payload[23]],
+						#[message.payload[24]], #[message.payload[25]], #[message.payload[26]], #[message.payload[27]],
+						#[message.payload[28]], #[message.payload[29]], #[message.payload[30]], #[message.payload[31]],
+						#[message.payload[32]], #[message.payload[33]], #[message.payload[34]], #[message.payload[35]], #[message.payload[36]]
+				       )
+	       ]]></db:parameterized-query>
+		</db:insert>
+
+	</flow>
+
+</mule>

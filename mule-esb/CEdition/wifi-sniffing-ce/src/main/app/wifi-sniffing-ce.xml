@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:jersey="http://www.mulesoft.org/schema/mule/jersey"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/jersey http://www.mulesoft.org/schema/mule/jersey/current/mule-jersey.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+
+	<db:generic-config name="Generic_Database_Configuration-Hive-Wifi-Sniffing"
+		url="jdbc:hive2://xxx.xx.x.75:10000/default?user=hive&amp;password=hive@123"
+		driverClassName="org.apache.hive.jdbc.HiveDriver" doc:name="Generic Database Configuration"
+		doc:description="Generic_Database_Configuration-Hive" />
+
+	<flow name="ImportCSVFileToHiveDB-Wifi-Sniffing">
+		<file:inbound-endpoint path="/home/xcaliber/Vitthal/MuleESB/Source"
+			responseTimeout="10000" doc:name="Source" />
+
+		<object-to-string-transformer doc:name="Object to String" />
+
+		<splitter expression="#[StringUtils.split(message.payload, '\n\r')]"
+			doc:name="Splitter" />
+
+		<expression-transformer doc:name="Expression"
+			expression="#[StringUtils.split(message.payload, ',')]" />
+
+		<db:insert config-ref="Generic_Database_Configuration-Hive-Wifi-Sniffing"
+			doc:name="Database">
+			<db:parameterized-query>
+            <![CDATA[insert into user_details(first_name, last_name, email, dob) values(#[message.payload[0]], #[message.payload[1]], #[message.payload[2]], #[message.payload[3]])]]>
+            </db:parameterized-query>
+		</db:insert>
+
+	</flow>
+
+</mule>
