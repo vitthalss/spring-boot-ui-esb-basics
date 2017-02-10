@@ -18,12 +18,12 @@ public class HiveJDBCTester {
 		}
 		/**
 		 * Connection con = DriverManager.getConnection(
-		 * "jdbc:hive2://172.16.1.75:10000/default", "hive", "hive@123");
+		 * "jdbc:hive2://xxx.xx.x.75:10000/default", "hive", "hive@123");
 		 */
 		
 		Connection con = DriverManager
 				.getConnection(
-						"jdbc:hive2://bbh-1432449493.us-east-1.elb.amazonaws.com:11983/att_rlo",
+						"jdbc:hive2://xxx.xx.x.75:10000/att_rlo",
 						"hive", "hive@123");
 		Statement stmt = con.createStatement();
 		

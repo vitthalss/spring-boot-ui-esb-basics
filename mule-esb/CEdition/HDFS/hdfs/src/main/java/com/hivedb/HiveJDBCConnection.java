@@ -6,7 +6,7 @@ import java.sql.*;
 public class HiveJDBCConnection {
    // JDBC driver name and database URL
    static final String JDBC_DRIVER = "org.apache.hive.jdbc.HiveDriver";  
-   static final String DB_URL = "jdbc:hive2://172.16.1.75:10000/default";
+   static final String DB_URL = "jdbc:hive2://xxx.xx.x.75:10000/default";
 
    //  Database credentials
    static final String USER = "hive";
