@@ -1,0 +1,35 @@
+package com.drools.demo
+import org.mule.MessageExchangePattern;
+import com.drools.demo.Customer;
+ 
+global org.mule.module.bpm.MessageService mule;
+ 
+dialect "mvel"
+ 
+declare Customer
+    @role('event')
+end
+ 
+rule "Decide Platinum Customer"
+    lock-on-active
+when
+    $customer : Customer(purchase >= 10000)
+then
+    modify($customer) {setCustomerType("Platinum")}
+end
+ 
+rule "Decide Gold Customer"
+    lock-on-active
+when
+    $customer : Customer(purchase >= 5000 && purchase < 10000)
+then
+    modify($customer) {setCustomerType("Gold")}
+end
+ 
+rule "Decide Silver Customer"
+    lock-on-active
+when
+    $customer : Customer(purchase< 5000)
+then
+    modify($customer) {setCustomerType("Silver")}
+end
