@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:bpm="http://www.mulesoft.org/schema/mule/bpm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/bpm http://www.mulesoft.org/schema/mule/bpm/3.6/mule-bpm.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<http:listener-config name="HTTP_Listener_Configuration"
+		host="localhost" port="8085" doc:name="HTTP Listener Configuration" />
+	<bpm:drools />
+
+	<spring:beans>
+		<spring:bean name="NoFactsBean" class="java.util.ArrayList" />
+	</spring:beans>
+
+	<flow name="SampleDROOLSFlow">
+		<http:listener config-ref="HTTP_Listener_Configuration"
+			path="/imeibrms" allowedMethods="POST,GET" doc:name="HTTP" />
+		<object-to-string-transformer doc:name="Object to String" />
+		<json:json-to-object-transformer
+			returnClass="com.phoenix.Device" doc:name="JSON to Object" />
+			
+			<bpm:rules rulesDefinition="device.drl"
+			initialFacts-ref="NoFactsBean" doc:name="BPM Rules" />
+			
+		<set-payload value="#[payload.object]" doc:name="Set Payload" />
+        <logger message="#[message]" level="INFO" doc:name="Logger"/>
+		<json:object-to-json-transformer
+			doc:name="Object to JSON" />
+	</flow>
+</mule>
