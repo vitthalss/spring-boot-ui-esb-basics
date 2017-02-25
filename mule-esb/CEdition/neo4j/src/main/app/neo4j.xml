@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:neo4j="http://www.mulesoft.org/schema/mule/neo4j" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/neo4j http://www.mulesoft.org/schema/mule/neo4j/current/mule-neo4j.xsd">
+   
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8087" basePath="hubway" doc:name="HTTP Listener Configuration"/>
+    <neo4j:config name="Neo4j" baseUri="bolt://localhost:7687/db/data" password="neo4j@123" user="neo4j" doc:name="Neo4j">
+        <neo4j:connection-pooling-profile initialisationPolicy="INITIALISE_ONE" exhaustedAction="WHEN_EXHAUSTED_GROW"/>
+    </neo4j:config>
+    <flow name="neo4jFlow">
+
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
+        <logger message="000000000000000000000:: #[message]" level="INFO" doc:name="Logger"/>
+        <neo4j:run-cypher-query config-ref="Neo4j"  doc:name="Neo4j" query="MERGE (n:Employee { name: 'Lokesh' }) RETURN n"/>
+        <logger message="111111111111111111111:: #[message]" level="INFO" doc:name="Logger"/>
+<!--         <expression-transformer
+            expression="(['name':$.get(0)] in payload)"
+            doc:name="Raw Data to Maps" /> -->
+        <logger message="222222222222222222::: #[message]" level="INFO" doc:name="Logger"/>
+        <json:object-to-json-transformer doc:name="Object to JSON" />
+   
+    </flow>
+</mule>
