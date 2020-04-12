@@ -5,6 +5,14 @@
 - mule-esb
 - red5-server
 - spring-boot
+  - DROOLS
+  - STSTest
+  - SampleDROOLS
+  - spring-boot-oauth2-master
+  - spring-boot-rest-swagger-master
+  - spring-boot-reference.pdf
+  - spring-data-jpa-reference.pdf
+  - spring-security-reference.pdf
 
 > [Eclipse Foundation Project Handbook](https://www.eclipse.org/projects/handbook/#resources-commit).
 
