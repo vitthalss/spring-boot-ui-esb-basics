@@ -1,3 +1,11 @@
+*.pl linguist-detectable=false
+*.js linguist-detectable=false
+*.html linguist-detectable=false
+*.htm inguist-detectable=false
+*.css linguist-detectable=false
+*.java linguist-detectable=true
+
+
 # Compiled class file
 *.class
 
@@ -28,13 +36,3 @@ hs_err_pid*
 .settings/
 target/
 .idea/
-
-
-
-
-
-
-*.pl linguist-detectable=true
-*.js linguist-detectable=true
-*.html linguist-detectable=false
-*.htm inguist-detectable=false
