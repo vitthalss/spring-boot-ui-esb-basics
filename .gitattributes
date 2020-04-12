@@ -1,0 +1,7 @@
+*.pl linguist-detectable=false
+*.js linguist-detectable=false
+*.html linguist-detectable=false
+*.htm inguist-detectable=false
+*.css linguist-detectable=false
+*.java linguist-detectable=true
+*.rb linguist-language=Java
