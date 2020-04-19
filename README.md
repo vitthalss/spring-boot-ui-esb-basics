@@ -22,6 +22,11 @@
   - spring-data-jpa-reference.pdf
   - spring-security-reference.pdf
 
+
+> [Angular](https://github.com/ganatan).
+
+> [Angular](https://github.com/cornflourblue).
+
 > [Eclipse Foundation Project Handbook](https://www.eclipse.org/projects/handbook/#resources-commit).
 
 > [GitHub Pages](https://pages.github.com/).
