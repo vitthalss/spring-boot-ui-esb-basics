@@ -38,3 +38,5 @@
 > [GitHub Pages and Jekyll](https://www.youtube.com/watch?v=nN6QuNqmAwk&feature=emb_rel_end).
 
 > [k8s-spring-boot-example](https://github.com/TechPrimers/k8s-spring-boot-example).
+
+> [Kubernetes YML Generator with Usage for Deployment and Service | K8s Primer](https://www.youtube.com/watch?v=ZHY8Zd4R874).
