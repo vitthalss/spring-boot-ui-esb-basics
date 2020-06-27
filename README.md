@@ -36,3 +36,5 @@
 > [GitHub Pages](https://pages.github.com/).
 
 > [GitHub Pages and Jekyll](https://www.youtube.com/watch?v=nN6QuNqmAwk&feature=emb_rel_end).
+
+> [k8s-spring-boot-example](https://github.com/TechPrimers/k8s-spring-boot-example).
