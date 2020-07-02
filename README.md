@@ -44,3 +44,7 @@
 > [spring-cloud-eureka-hystrix-zuul-example](https://github.com/TechPrimers/spring-cloud-eureka-hystrix-zuul-example).
 
 > [Spring Cloud Eureka, Hystrix and Zuul in Microservices](https://www.youtube.com/watch?v=dZ8Z5DpcdrM).
+
+> [spring-cloud-eureka-and-hystrix-example](https://github.com/TechPrimers/spring-cloud-eureka-and-hystrix-example.git).
+
+> [Spring Cloud Eureka and Hystrix using Microservices | Tech Primers](https://www.youtube.com/watch?v=hQ1pu1O4dRA).
