@@ -47,4 +47,6 @@
 
 > [spring-cloud-eureka-and-hystrix-example](https://github.com/TechPrimers/spring-cloud-eureka-and-hystrix-example.git).
 
+> [HYSTRIX | DEFEND YOUR APP](https://github.com/Netflix/Hystrix/wiki).
+
 > [Spring Cloud Eureka and Hystrix using Microservices | Tech Primers](https://www.youtube.com/watch?v=hQ1pu1O4dRA).
