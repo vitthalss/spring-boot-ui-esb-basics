@@ -41,6 +41,8 @@
 
 > [Kubernetes YML Generator with Usage for Deployment and Service | K8s Primer](https://www.youtube.com/watch?v=ZHY8Zd4R874).
 
+> [Spring Cloud Eureka using Microservices - Example | Tech Primers](https://www.youtube.com/watch?v=SjU3AsSATvI).
+
 > [spring-cloud-eureka-hystrix-zuul-example](https://github.com/TechPrimers/spring-cloud-eureka-hystrix-zuul-example).
 
 > [Spring Cloud Eureka, Hystrix and Zuul in Microservices](https://www.youtube.com/watch?v=dZ8Z5DpcdrM).
