@@ -52,3 +52,13 @@
 > [HYSTRIX | DEFEND YOUR APP](https://github.com/Netflix/Hystrix/wiki).
 
 > [Spring Cloud Eureka and Hystrix using Microservices | Tech Primers](https://www.youtube.com/watch?v=hQ1pu1O4dRA).
+
+> [What is Reactive Programming? | Tech Primers](https://www.youtube.com/watch?v=0ueFTvSdxpw).
+
+> [https://reactivemanifesto.org/](https://reactivemanifesto.org/).
+
+> [https://github.com/ReactiveX/RxJava/wiki](https://github.com/ReactiveX/RxJava/wiki).
+
+> [http://reactivex.io/intro.html](http://reactivex.io/intro.html).
+
+> [http://reactivex.io/documentation/observable.html](http://reactivex.io/documentation/observable.html).
