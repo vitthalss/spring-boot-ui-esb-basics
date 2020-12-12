@@ -62,6 +62,9 @@
 > [http://reactivex.io/intro.html](http://reactivex.io/intro.html).
 
 > [http://reactivex.io/documentation/observable.html](http://reactivex.io/documentation/observable.html).
-> [https://github.com/imglib](Open-source n-dimensional image data representation and manipulation).
-> [https://github.com/imglib/imglib2](Open-source n-dimensional image data representation and manipulation).
+
+> [Open-source n-dimensional image data representation and manipulation-i](https://github.com/imglib).
+
+> [Open-source n-dimensional image data representation and manipulation-ii](https://github.com/imglib/imglib2).
+
 
