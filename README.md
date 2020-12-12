@@ -70,3 +70,6 @@
 > [IMAGEJ-OPEN SOURCE JAVA PROGRAM](https://imagej.net/ImageJ).
 
 > [OpenCV with JavaFX](https://github.com/opencv-java).
+
+> [Java Digital Image Processing](https://www.tutorialspoint.com/java_dip/index.htm).
+
