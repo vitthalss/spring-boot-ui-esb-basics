@@ -69,4 +69,4 @@
 
 > [IMAGEJ-OPEN SOURCE JAVA PROGRAM](https://imagej.net/ImageJ).
 
-> [OpenCV with JavaFX](https:github.com/opencv-java).
+> [OpenCV with JavaFX](https://github.com/opencv-java).
