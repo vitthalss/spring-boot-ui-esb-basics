@@ -1,6 +1,6 @@
-**Java-Jakarta-EE**
+**JAVA-JAKARTA-EE**
 
-> **Proof of concepts** 
+> **SAMPLE PROGRAMS** 
 
 - mule-esb
   - Books
