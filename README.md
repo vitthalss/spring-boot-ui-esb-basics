@@ -1,18 +1,8 @@
-**JAVA-JAKARTA-EE**
+**BASICS JAVA-JAKARTA-EE**
 
-> **SAMPLE PROGRAMS** 
-
-- Mule-ESB
-  - Books
-  - CEdition
-  - EEdition
+> **BASIC TUTORIALS** 
   
-- Red5-server
-  - Red5prolive
-  - Red5-server.pdf
-  - Red5.pdf
-  
-- spring-boot
+- spring-boot-basics
   - DROOLS
   - STSTest
   - SampleDROOLS
@@ -21,7 +11,6 @@
   - spring-boot-reference.pdf
   - spring-data-jpa-reference.pdf
   - spring-security-reference.pdf
-
 
 > [Angular](https://github.com/ganatan).
 
